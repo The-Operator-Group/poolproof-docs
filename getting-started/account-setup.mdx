@@ -1,0 +1,262 @@
+---
+title: "Configuring Your PoolProof Account After Setup"
+sidebarTitle: "Account Setup"
+description: "Step-by-step guide to configuring service areas, service plans, billing, notifications, SSO, your product catalog, and team roles in PoolProof."
+---
+
+PoolProof account setup covers the key configuration steps your onboarding specialist completes with you before go-live — and that you can revisit any time your business changes. This page walks through setting up service areas, service plans, billing settings, notifications, single sign-on, your product catalog, and your team, in the order that makes each step build on the last.
+
+<Tip>
+  Your PoolProof onboarding specialist configures most of these settings alongside you during onboarding. Use this page as a reference when you need to revisit a setting, add a new service area, or onboard a new team member after go-live.
+</Tip>
+
+## Setup Overview
+
+<Steps>
+  <Step title="Define Your Service Areas">
+    Service areas are the geographic territories your business operates in. Every customer belongs to a service area, and every technician can belong to one or more service areas. Getting service areas right first makes every subsequent configuration step — service plans, routes, inventory, and billing — cleaner.
+
+    To create a service area, navigate to **Settings > Service Areas** and select **Add Service Area**. For each area, define:
+
+    - **Name** — a label your team will recognize (for example, "North Metro" or "Downtown")
+    - **Geographic boundary** — the coverage zone used to validate customer addresses during signup and route assignment
+    - **Assigned technicians** — which team members are eligible to service stops in this area
+    - **Inventory** — if you manage stocked chemicals per area, service areas can each have their own inventory levels and reorder thresholds
+
+    <Tip>
+      If you run a single territory today but plan to expand, set up even one named service area now. Adding a second area later is straightforward, and having that structure in place makes route separation and technician assignment much cleaner as you grow.
+    </Tip>
+
+    Customers added outside any defined service area boundary can be flagged for manual review or rejected with a configurable message — useful when you enable the self-serve customer signup feature later.
+  </Step>
+
+  <Step title="Create Your Service Plans">
+    Service plans define exactly what each billing tier includes: the chemical protocols your technicians follow, the process steps they complete on every visit, the readings they record, and the periodic maintenance tasks they're responsible for. Every body of water is assigned a service plan, and every customer on the same plan gets the same service — no variation by technician.
+
+    Navigate to **Settings > Service Plans** and select **Add Service Plan**. Build each plan with the following sections:
+
+    **Billing configuration**
+    - Plan name and description (visible to customers and staff)
+    - Billing method: per-visit or per-month
+    - Billing timing: advance (billed before service) or arrears (billed after)
+    - Chemical usage billing: whether chemical costs are passed through or included in the flat rate
+    - Tax behavior: taxable or tax-exempt by plan
+
+    **Price points**
+
+    A single service plan can carry multiple price points — allowing you to charge different amounts for the same service definition based on neighborhood, pool size, customer type, or promotional rates. Add each price point under the plan and assign it to individual customers when you set up their service schedule.
+
+    **Chemical and reading requirements**
+
+    For each plan, configure which readings technicians are required to capture (free chlorine, pH, alkalinity, calcium hardness, CYA, salt, temperature) and whether each reading is required every visit, required at a defined frequency, or optional. Set dosing behavior per reading: automated dosing calculations, manual dosing, or monitoring only.
+
+    **Process workflow**
+
+    Define the ordered list of tasks technicians complete during every visit on this plan. Tasks can be required or optional, and responses can be structured as:
+    - Simple completion checkoff
+    - Yes / No selection
+    - Multiple-choice selection
+    - Free-form text entry
+    - Photo capture (mark any task as requiring a photo before it can be marked complete)
+    - Video capture
+
+    A basic plan might have a six-step process. A premium plan might include detailed equipment inspection steps, filter PSI recording, and additional photo documentation requirements.
+
+    **Periodic maintenance**
+
+    Add the maintenance tasks that recur on a schedule rather than every visit: filter cleans, filter replacements, backwashing, salt cell cleanings, equipment testing. For each task, configure:
+    - Interval (every N weeks, monthly, quarterly, annually)
+    - Whether it's completed during a regular service visit or scheduled as a separate job
+    - Whether it generates a work order automatically when it comes due
+
+    <Tip>
+      Start with two or three plans that match your current pricing tiers. You can always add specialized plans — commercial, vacation home, spa-only — after launch. Unlimited plans are supported.
+    </Tip>
+  </Step>
+
+  <Step title="Configure Billing Settings">
+    PoolProof automates invoicing, collections, and payment retries across all your customers. Before your first billing run, configure the platform to match your payment terms and accounting setup.
+
+    Navigate to **Settings > Billing** to configure:
+
+    **Payment and collections**
+    - Default payment terms (due on receipt, net 15, net 30)
+    - Automated collections: when payment methods are on file, charges run automatically on the invoice due date
+    - Smart retry schedule: failed payments are automatically retried when the card is most likely to clear — no manual intervention needed
+    - ACH / bank draft: enable bank draft as an option for customers who want to reduce card fees
+    - Automatic card updates: when issuers push updated card details (new expiration dates, re-issued cards), PoolProof applies them automatically
+
+    **Surcharges and taxes**
+    - Configure any surcharges that apply to invoices (fuel surcharges, chemical surcharges, service fees)
+    - Sales tax is calculated automatically based on customer billing addresses — no tax tables to manage. Mark specific customers as tax-exempt organizations when applicable.
+
+    **Credits and refunds**
+    - Set default behavior for issuing credits that reduce future invoice amounts
+    - Partial and full invoice refund capability is available from the invoice detail view
+
+    **QuickBooks Online integration**
+
+    Connect PoolProof to QuickBooks Online under **Settings > Integrations > QuickBooks**. Once connected, invoices, payments, refunds, and credits sync to QuickBooks in real time. Map your PoolProof revenue categories to the correct QuickBooks accounts during setup.
+
+    <Note>
+      Complete the QuickBooks connection before your first billing run. Invoices created before the integration is connected do not back-sync automatically — your onboarding specialist can assist with any historical reconciliation needed.
+    </Note>
+  </Step>
+
+  <Step title="Set Up Notifications">
+    PoolProof sends automated communications to your customers throughout the service lifecycle. Configure your notification templates to reflect your brand voice and include the right information for each touchpoint.
+
+    Navigate to **Settings > Notifications** to configure:
+
+    **Service completion notices**
+
+    Automatically sent to customers after each service visit, these emails include technician notes, photos taken during the visit, chemical readings, and any recommendations for follow-up work. Customize the template with your company name, logo, and message tone.
+
+    **Customer SMS and email templates**
+    - Route arrival windows — notify customers when their technician is on the way
+    - Appointment reminders for scheduled work orders
+    - Quote follow-up reminders — automatically sent to customers with pending quotes
+    - Invoice and payment notifications
+
+    **Notification channels**
+
+    PoolProof supports SMS and email for customer-facing notifications. For each template, configure:
+    - Which channel to use (SMS, email, or both)
+    - Timing relative to the triggering event (same day, 24 hours before, immediately on completion)
+    - Whether the notification is on by default for all customers or opt-in
+
+    <Tip>
+      Keep service completion SMS messages short — a friendly one-liner with a link to the full completion report works better than a long text that customers don't read. Save the detail for the email version.
+    </Tip>
+  </Step>
+
+  <Step title="Connect Google or Microsoft SSO">
+    Require your team to sign in with their existing Google Workspace or Microsoft accounts instead of managing separate PoolProof passwords. SSO reduces credential sprawl, makes offboarding immediate, and gives your staff a familiar login experience.
+
+    Navigate to **Settings > Security** to configure authentication:
+
+    - **Google Authentication** — allow or require users to sign in through Google personal or Workspace accounts
+    - **Microsoft Authentication** — allow or require users to sign in through Microsoft personal or Microsoft 365 accounts
+
+    You can configure SSO as optional (users may use either SSO or a PoolProof password) or required (all users in your organization must authenticate through the configured provider). Requiring SSO is recommended for teams that already standardize on Google Workspace or Microsoft 365.
+
+    <Tip>
+      If you require SSO, make sure every team member has an active account with the configured provider before enforcing it — otherwise they'll be locked out until you provision their identity account.
+    </Tip>
+  </Step>
+
+  <Step title="Build Your Product Catalog">
+    Your product catalog is the shared library of chemicals, equipment, parts, and services your team uses on quotes, work orders, and invoices. A complete catalog means technicians and office staff pull from a consistent list rather than typing free-form line items that create reporting inconsistencies.
+
+    Navigate to **Settings > Product Catalog** to set up:
+
+    **Categories**
+
+    Create categories to organize your catalog: Chemicals, Equipment, Labor, Repair Parts, Seasonal Services, and so on. Categories appear as filters in the product picker and drive reporting roll-ups.
+
+    **Products**
+
+    Add each chemical and physical item your team uses or sells. For each product, configure:
+    - Name, SKU, and category
+    - Unit of measure (oz, lb, gal, each)
+    - Default unit cost and sell price
+    - Inventory management method: stocked (tracked by service area with reorder thresholds), order as-needed, or manually managed
+
+    **Services**
+
+    Add the labor and service line items that appear on quotes and invoices: Filter Clean, Salt Cell Cleaning, Equipment Repair, Pool Opening, Pool Closing, etc. Services are not inventory-tracked.
+
+    **Inventory thresholds (stocked products)**
+
+    For products you stock by service area, set reorder points for each area. PoolProof surfaces a reorder alert when stock drops below threshold — keeping your trucks stocked without manual tracking.
+
+    <Tip>
+      Add your 20 most-used chemicals and services first and launch with that subset. You can expand the catalog incrementally. A lean, accurate catalog is more useful than a comprehensive one full of duplicate entries.
+    </Tip>
+  </Step>
+
+  <Step title="Invite Team Members and Assign Roles">
+    Add your staff to PoolProof and assign each person a role that matches their job function. Role-based access control limits what each user can see and do — office staff don't need route optimization controls, and technicians don't need billing access.
+
+    Navigate to **Settings > Team** and select **Invite Member**. For each team member, configure:
+
+    - **Name and email address** — the invite is sent to this address
+    - **Role** — select the role that matches their function (see role descriptions below)
+    - **Service area assignments** — assign technicians to the service areas they cover; office and management roles can typically access all areas
+
+    **Roles in PoolProof**
+
+    <Tabs>
+      <Tab title="Owner / Admin">
+        Full access to all settings, billing, reports, and team management. Assign this role to business owners and operations managers who need unrestricted access.
+      </Tab>
+      <Tab title="Office Manager">
+        Access to customer records, invoicing, scheduling, quoting, and communications. Cannot modify organization-level settings or billing configuration. Appropriate for office staff who manage day-to-day operations.
+      </Tab>
+      <Tab title="Technician">
+        Mobile-app access to assigned routes and service stops. Can record readings, complete process steps, take photos, and capture customer signatures. Cannot access billing, customer financials, or settings. Assign to field technicians.
+      </Tab>
+    </Tabs>
+
+    <Note>
+      Users can belong to one or more organizations in PoolProof — useful if you operate multiple business entities or have contractors who work across companies. Each organization is configured and billed independently.
+    </Note>
+
+    After sending invites, confirm each team member has accepted and logged in before go-live day. If you've configured SSO, make sure their Google or Microsoft account matches the email address on the invite.
+  </Step>
+</Steps>
+
+## Configuration Checklist
+
+Use this checklist to confirm your account is ready before go-live.
+
+<AccordionGroup>
+  <Accordion title="Service Areas">
+    - [ ] At least one service area created and named
+    - [ ] Geographic boundary defined
+    - [ ] Technicians assigned to appropriate service areas
+    - [ ] Inventory stocking settings configured per area (if applicable)
+  </Accordion>
+
+  <Accordion title="Service Plans">
+    - [ ] All active billing tiers created as service plans
+    - [ ] Price points configured per plan
+    - [ ] Chemical reading requirements set
+    - [ ] Process workflows defined with required vs. optional steps
+    - [ ] Photo requirements set on tasks where documentation is critical
+    - [ ] Periodic maintenance tasks added with correct intervals
+  </Accordion>
+
+  <Accordion title="Billing">
+    - [ ] Payment terms set to match your business policy
+    - [ ] Automated collections enabled (if using)
+    - [ ] Tax behavior confirmed (automatic calculation enabled)
+    - [ ] QuickBooks Online connected and accounts mapped
+    - [ ] ACH / bank draft enabled (if offering to customers)
+  </Accordion>
+
+  <Accordion title="Notifications">
+    - [ ] Service completion email template customized with your branding
+    - [ ] SMS and email notification templates reviewed
+    - [ ] Notification timing configured per event type
+  </Accordion>
+
+  <Accordion title="Security">
+    - [ ] SSO provider configured (Google or Microsoft) if applicable
+    - [ ] SSO requirement enforced or optional — decision confirmed
+  </Accordion>
+
+  <Accordion title="Product Catalog">
+    - [ ] Categories created
+    - [ ] Top chemicals and products added with correct pricing
+    - [ ] Service line items added
+    - [ ] Inventory thresholds set for stocked products
+  </Accordion>
+
+  <Accordion title="Team">
+    - [ ] All team members invited
+    - [ ] Roles assigned correctly
+    - [ ] Service area assignments confirmed for technicians
+    - [ ] All invitations accepted before go-live
+  </Accordion>
+</AccordionGroup>

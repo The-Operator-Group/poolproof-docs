@@ -1,0 +1,168 @@
+---
+title: "Intelligent Routing: Automated Pool Route Optimization"
+sidebarTitle: "Intelligent Routing"
+description: "Build tighter routes, cut drive time, and handle disruptions in seconds with PoolProof's intelligent routing and Digital Dispatcher."
+---
+
+Intelligent Routing is PoolProof's automated route-building and route-management system. This page explains how the optimization algorithm works, how the Digital Dispatcher keeps your week running when plans change, how to adjust routes manually, and how customer replies to "on the way" texts reach the right technician automatically.
+
+## How Route Optimization Works
+
+PoolProof builds routes from the templates you control, then continuously optimizes them to reduce drive time and balance workloads across your team. Every week starts from a known structure — your ideal week — rather than a blank slate.
+
+When you trigger an optimization, the algorithm works through four stages in sequence:
+
+<Steps>
+  ### Group by Service Day
+  PoolProof first partitions your customer list by their assigned service day — Monday pools stay with Monday pools, Wednesday pools with Wednesday pools. This keeps your weekly cadence intact.
+
+  ### Cluster Geographically
+  Within each day's pool of customers, the algorithm groups nearby addresses together. Tight geographic clusters eliminate the criss-cross driving that adds miles without adding stops.
+
+  ### Balance by Duration
+  Clusters are then distributed across your available technicians so that each tech's total service time for the day is as even as possible. One tech doesn't finish at noon while another is still running at 6 PM.
+
+  ### Consolidate Undersized Routes
+  If any route ends up too light — too few stops or too little drive time to justify a dedicated day — PoolProof folds those stops into adjacent routes. You end up with fewer, fuller routes instead of several thin ones.
+</Steps>
+
+The result is a set of efficient routes that reflect your business today, not six months ago when you last rebuilt them by hand.
+
+<Tip>
+  Optimization gives you a strong starting point, but you stay in control. After running the algorithm, drag stops between routes, reorder stops within a route, or move a customer to a different service day. PoolProof recalculates estimated distance and duration as you edit.
+</Tip>
+
+---
+
+## The Digital Dispatcher (Routing Assistant)
+
+The Digital Dispatcher is PoolProof's always-on routing assistant. It continuously analyzes your routes, monitors conditions, and surfaces recommendations — so you're never caught flat-footed when the morning goes sideways.
+
+<CardGroup cols={2}>
+  <Card title="Disruption Management" icon="triangle-exclamation">
+    When a technician calls out, the Digital Dispatcher builds a reassignment plan in seconds, optimized for both drive time and workload balance. Review the plan, approve it with one click, or drag individual stops to tweak the result before sending it to your team.
+  </Card>
+  <Card title="Weather Monitoring" icon="cloud-sun">
+    The dispatcher tracks weather conditions that affect your service schedule. When a weather event is likely to disrupt stops, it surfaces the impact ahead of time so you can act before customers are affected.
+  </Card>
+  <Card title="Absence Management" icon="user-minus">
+    Planned or unplanned absences are handled the same way — the dispatcher identifies which stops are at risk and proposes a coverage plan that keeps drive time and workload in check across the remaining team.
+  </Card>
+  <Card title="Route Drift Detection" icon="arrow-trend-up">
+    Routes drift as your customer base shifts. The dispatcher flags routes that have developed extra miles or imbalanced days. When a route is working against you, one click rebuilds it for your business as it stands today.
+  </Card>
+</CardGroup>
+
+---
+
+## Route Templates
+
+Every week starts from a versioned route template — your ideal week, built once and tuned as things change. Templates give the optimizer a baseline to work from and preserve the structure of your week even as individual stops shift.
+
+<Info>
+  Route templates are versioned, which means PoolProof keeps a history of changes. You can see how a route has evolved, compare routing decisions, and roll back if a change doesn't work out.
+</Info>
+
+When your customer base shifts — you add a new neighborhood, lose a cluster of accounts, or bring on an extra tech — PoolProof flags what needs attention and helps you adjust without rebuilding from scratch.
+
+---
+
+## Adjusting Routes Manually
+
+You have full control at every level of the route:
+
+- **Drag stops between routes** — move a customer from one technician's day to another
+- **Reorder stops within a route** — change the sequence in which a technician visits addresses
+- **Move to a different service day** — shift a customer from Tuesday service to Thursday service
+- **Drag to adjust disruption plans** — when the dispatcher proposes a reassignment, override individual stops by dragging them to a different technician
+
+PoolProof recalculates estimated distance, drive time, and completion metrics live as you make each adjustment.
+
+---
+
+## Multi-Address and Multi-Service-Day Customers
+
+Customers who receive service more than once per week, or who have multiple service addresses with different schedules, are handled automatically. Each address and service frequency appears on the correct route day. The system deduplicates stops so the same address never shows up twice on the same day, and multi-address accounts with different schedules are split correctly across the relevant days.
+
+---
+
+## Technician Mobile Experience
+
+Each technician sees only their assigned route in the PoolProof mobile app. Stops appear in the optimized order with full customer details — access notes, gate codes, equipment information, and service history — ready before the first stop.
+
+<CardGroup cols={3}>
+  <Card title="One-Tap Navigation" icon="map-location-dot">
+    Tap any stop to open turn-by-turn navigation in the technician's preferred map app. No manual address entry.
+  </Card>
+  <Card title="Customer Details On Screen" icon="address-card">
+    Gate codes, pool notes, access instructions, and equipment details are all visible on the stop screen — no calls to the office for information that's already in the system.
+  </Card>
+  <Card title="Automatic Sync" icon="rotate">
+    Changes made in the office — reassignments, reorders, new stops — sync to the technician's app automatically. Techs always have the current plan without needing to refresh or call in.
+  </Card>
+</CardGroup>
+
+---
+
+## Route Performance Tracking
+
+PoolProof tracks actual performance against planned estimates so you can see where routes are accurate and where they need tuning.
+
+| Metric | What It Shows |
+|---|---|
+| Estimated vs. actual distance | Whether planned mileage reflects reality |
+| Estimated vs. actual duration | Whether service time estimates are accurate |
+| Completion rate | How reliably stops are being completed on schedule |
+| Skip patterns | Which stops are regularly skipped and why |
+| Service time accuracy | Which stop types consistently run over or under estimate |
+
+Use this data to refine your route templates over time — tightening estimates, redistributing stops that routinely run long, and catching skip patterns before they become customer complaints.
+
+---
+
+## Intelligent Message Routing
+
+When a customer replies to an "on the way" notification, that reply needs to reach the technician who is two minutes from the driveway — not sit in a shared office inbox waiting for someone to relay it.
+
+PoolProof's intelligent message routing handles this automatically. When a reply comes in from a customer whose stop is currently in progress or in the active driving window, PoolProof identifies the en-route technician and adds them to the conversation. The tech sees the reply on their phone and can respond directly, without the office ever touching it.
+
+The routing is deliberately precise:
+
+- It only adds the technician who is **genuinely en route** to that specific address
+- It adds the tech to the thread — it does not remove existing participants
+- Office staff and managers already in the conversation stay on it
+- The window opens when the "on the way" notification sends and closes when the visit is marked complete
+
+<Note>
+  Intelligent message routing requires SMS notifications to be active. If you haven't set those up yet, go to **Settings → Notifications** and enable SMS Notifications first. Once SMS is running, enable intelligent routing at **Settings → Inbox AI → Intelligent Assignment**.
+</Note>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How does the optimization algorithm handle customers with multiple service days?">
+    Multi-service-day customers are handled automatically. If a customer receives service twice per week, they appear on both route days. The system deduplicates stops within each day and manages multi-address customers with different schedules without any manual setup.
+  </Accordion>
+
+  <Accordion title="Can I run optimization on just one route, or does it affect all routes at once?">
+    You can optimize individual routes or run optimization across all routes at once. Running it on a single route is useful when you've added a cluster of new customers in one area and want to tighten that day without touching the rest of the week.
+  </Accordion>
+
+  <Accordion title="What happens to manual adjustments I've made when I run optimization again?">
+    Optimization rebuilds routes based on your current customer list and templates. Manual adjustments you've made — such as pinning a customer to a specific technician or day — can be preserved if you've set those constraints before running the optimizer.
+  </Accordion>
+
+  <Accordion title="How does the dispatcher know when a route has drifted?">
+    The dispatcher monitors your routes continuously and compares current metrics — total miles, duration, stop counts — against your template baselines. When a route falls meaningfully outside its baseline (extra miles, imbalanced days, one tech consistently finishing late), it surfaces a recommendation to review and rebuild.
+  </Accordion>
+
+  <Accordion title="Does intelligent message routing work with WhatsApp and email, or only SMS?">
+    Intelligent message routing currently applies to SMS replies triggered by "on the way" notifications. The broader centralized inbox handles customer conversations across SMS, WhatsApp, and email — and your team can respond to those from a single shared view.
+  </Accordion>
+
+  <Accordion title="What if I don't want a customer's reply going to the technician directly?">
+    Intelligent Assignment is a global setting you control. If you prefer all customer replies to stay in the shared office inbox, leave the setting off. You can enable or disable it at any time at **Settings → Inbox AI → Intelligent Assignment**.
+  </Accordion>
+</AccordionGroup>

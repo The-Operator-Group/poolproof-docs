@@ -1,0 +1,187 @@
+---
+title: "Process Management: Consistent Service at Every Stop"
+sidebarTitle: "Process Management"
+description: "Build step-by-step workflows for any service type so every technician follows your standards and captures required documentation at every stop."
+---
+
+Process Management is PoolProof's workflow engine for recurring service visits and one-time work orders. This page covers how to build phase-organized processes, which input types are available, how processes connect to service plans and work order templates, and what separates service plan processes from work order processes.
+
+---
+
+## Why Process Management Matters
+
+Without a defined process, service quality depends entirely on who shows up that day. An experienced tech remembers to photograph the equipment pad and record the salt cell reading. A new hire might not know to look. A rushed tech on a long day skips the post-service check.
+
+PoolProof fixes this by putting your standards on the technician's screen at every stop. The steps are the same whether it's your best tech or someone on their second week. The documentation gets captured because the process requires it — not because someone remembered to ask.
+
+<CardGroup cols={2}>
+  <Card title="Consistent Delivery" icon="check-double">
+    New hires follow your standards from day one because the process shows them exactly what to do at each phase of the visit — no training manual required.
+  </Card>
+  <Card title="Proof at Every Stop" icon="camera">
+    Photos, signatures, readings, and serial numbers are captured in the field and stored on the job record. You have documentation when a customer disputes the work or a warranty claim surfaces months later.
+  </Card>
+  <Card title="Less Dependency on You" icon="headset">
+    When the steps are on the screen, techs stop calling the office to ask "how do I do this?" Your process answers the question before they need to ask.
+  </Card>
+  <Card title="Quality Without Memory" icon="brain">
+    The process captures the finishing details that separate a professional service from a mediocre one — the brushed tile line, the photographed equipment pad, the recorded filter PSI — every single visit.
+  </Card>
+</CardGroup>
+
+---
+
+## The Three Service Phases
+
+Recurring service processes in PoolProof are organized into three phases that match the natural rhythm of a pool service visit. Technicians work through the phases in order, and each phase surfaces only the steps that belong to that moment in the job.
+
+<CardGroup cols={3}>
+  <Card title="Before Service" icon="magnifying-glass">
+    **Equipment and site inspection before touching the water.**
+
+    Use this phase to capture site conditions, verify access, confirm equipment status, and flag anything that needs attention before the tech starts. Examples: check equipment pad, record filter PSI, confirm gate access, note visible damage.
+  </Card>
+  <Card title="During Service" icon="flask">
+    **Chemical testing, treatment, and cleaning tasks.**
+
+    This phase covers the core service work: water testing, chemical dosing, brushing, skimming, vacuuming, and any cleaning tasks tied to the plan. Chemical reading inputs here feed directly into dosing calculations.
+  </Card>
+  <Card title="After Service" icon="circle-check">
+    **Final checks, documentation, and photo capture.**
+
+    Use this phase to verify everything is complete before the tech leaves: confirm equipment is running, capture the completion photo, record any observations for the customer's service report, and trigger the service completion notification.
+  </Card>
+</CardGroup>
+
+<Note>
+  Work order processes use the same three-phase structure, but the Before/During/After steps apply to the specific job being performed — an equipment repair, an installation, or a one-time service — rather than a recurring maintenance visit.
+</Note>
+
+---
+
+## Input Types
+
+The input type you choose for each step determines what the technician captures and how the data is stored. Service plan processes and work order processes support different sets of input types.
+
+<Tabs>
+  <Tab title="Service Plan Processes">
+    Use these input types when building processes for recurring service visits:
+
+    | Input Type | Use It For |
+    |---|---|
+    | **Checklist** | Multi-item tasks where any combination can be checked off (e.g., "brushed walls, brushed steps, vacuumed floor") |
+    | **Yes / No** | Simple binary confirmations ("Equipment running normally?", "Visible algae present?") |
+    | **Text Response** | Free-form observations or notes ("Describe any equipment concerns") |
+    | **Multiple Choice** | Selecting one option from a defined list ("Water clarity: clear, slightly cloudy, cloudy, green") |
+    | **Chemical Reading** | Capturing a measured value (pH, chlorine, alkalinity, salt level) that feeds into dosing calculations |
+    | **Photo Capture** | Attaching a photo to document a step — can be set as optional or required |
+  </Tab>
+  <Tab title="Work Order Processes">
+    Work order processes include all service plan input types, plus these additional options designed for repair, installation, and one-time jobs:
+
+    | Input Type | Use It For |
+    |---|---|
+    | **Serial Number Entry** | Recording equipment serial numbers for warranty registration or service records |
+    | **Barcode / QR Scanning** | Scanning product or equipment barcodes to populate fields automatically |
+    | **Numeric Input** | Capturing a specific measured value without it being a chemical reading (e.g., torque setting, pressure reading) |
+    | **Before / After Photo Pair** | Capturing a photo before work begins and a second photo after it's complete — both stored on the job record |
+    | **Customer Signature** | Capturing the customer's on-screen signature to confirm work was completed to their satisfaction |
+    | **Technician Signature** | Capturing the technician's signature for compliance or warranty documentation |
+  </Tab>
+</Tabs>
+
+---
+
+## Building and Managing Processes
+
+PoolProof's process builder gives you a drag-and-drop interface for assembling and adjusting workflows. You don't need to rebuild from scratch when you want to create a variation.
+
+**In the process builder you can:**
+
+- **Drag steps between phases** — move a step from During to After, or reorder steps within a phase, without losing any configuration
+- **Add photo requirements** — mark any step as requiring a photo before the tech can mark it complete
+- **Set required vs. optional** — required steps must be completed before the visit can be closed; optional steps are prompted but not blocking
+- **Clone and customize** — copy an existing process as the starting point for a new tier or service level, then add or remove steps as needed
+- **Add chemical reading inputs** — tie specific readings to dosing logic so PoolProof calculates the dose when the tech enters the value
+
+<Tip>
+  When you create a new premium service plan, clone the process from your standard plan and add the additional steps for the premium tier. This keeps your baseline consistent and makes the premium steps easy to identify.
+</Tip>
+
+---
+
+## Service Plan Processes vs. Work Order Processes
+
+Process Management covers two distinct contexts, and it's worth understanding how they differ:
+
+<AccordionGroup>
+  <Accordion title="Service plan processes — recurring visits">
+    Service plan processes guide weekly or bi-weekly maintenance visits. They are defined on each service plan, so different tiers can have different workflows. Every recurring visit generated from that plan automatically carries the correct process.
+
+    The three-phase structure (Before / During / After) is designed around the natural rhythm of maintenance service. Input types are focused on chemical readings, visual inspections, and cleaning task confirmation.
+
+    Service plan processes are the right tool for: weekly chemical service, bi-weekly maintenance, salt cell plans, or any repeating service cadence.
+  </Accordion>
+
+  <Accordion title="Work order processes — one-time jobs">
+    Work order processes enforce the documentation required for repairs, installations, warranty work, and any other one-time job. They are defined on work order templates, and every work order created from a template inherits its process automatically.
+
+    Work order processes add the documentation-heavy input types — serial numbers, barcode scanning, before/after photo pairs, and signature capture — that are essential for equipment jobs but aren't needed on a regular maintenance visit.
+
+    Work order processes are the right tool for: equipment installations, repairs, warranty jobs, equipment inspections on demand, or any job where documentation needs to meet a manufacturer or customer standard.
+  </Accordion>
+
+  <Accordion title="Where processes are defined">
+    - **Service plan processes** are defined under each service plan in your plan settings. Navigate to **Settings → Service Plans**, select a plan, and open the **Process** tab.
+    - **Work order processes** are defined on work order templates. Navigate to **Settings → Work Order Templates**, select a template, and open the **Process** tab. Every work order created from that template inherits the process.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Business Benefits
+
+<CardGroup cols={2}>
+  <Card title="Faster Onboarding" icon="user-plus">
+    New technicians follow your exact process from their first day. They don't need to shadow a senior tech for weeks to learn the standard — it's on the screen at every stop.
+  </Card>
+  <Card title="Fewer Calls to the Office" icon="phone-slash">
+    When the steps are defined and visible, techs stop calling to ask what to do next. Managers stop fielding the same questions on repeat. Your attention stays on running the business.
+  </Card>
+  <Card title="Documented Proof" icon="file-shield">
+    Photos, readings, signatures, and serial numbers are stored on every job record. When a customer disputes whether the gate was left open or a chemical was added, the documentation is already there.
+  </Card>
+  <Card title="Quality That Scales" icon="chart-line">
+    Adding a new technician or taking on a new neighborhood doesn't dilute your service quality. The process scales with the team because it lives in the system, not in tribal knowledge.
+  </Card>
+</CardGroup>
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Can two service plans share the same process, or does each plan need its own?">
+    Each service plan has its own process definition. If two plans should follow the same steps, clone the process from one plan to the other. From that point, you can adjust each independently without affecting the other.
+  </Accordion>
+
+  <Accordion title="What happens if a technician tries to close a visit without completing a required step?">
+    PoolProof prevents the visit from being marked complete until all required steps are satisfied. The technician sees which steps are still outstanding and must complete them before the stop can be closed.
+  </Accordion>
+
+  <Accordion title="Can I add a photo requirement to an existing step, or does it require a new step?">
+    You can add a photo requirement to any existing step in the process builder without creating a new step. Open the step settings and toggle the photo requirement on. It takes effect immediately on the next visit.
+  </Accordion>
+
+  <Accordion title="Are processes versioned like route templates?">
+    Process changes take effect on the next visit for all customers on that plan. PoolProof stores the process definition that was active at the time of each visit, so historical records accurately reflect what was required when the service was performed.
+  </Accordion>
+
+  <Accordion title="Can optional steps be made required later without affecting historical records?">
+    Yes. Changing a step from optional to required only affects future visits. Historical service records reflect the process that was in place when those visits were completed — changing the requirement going forward does not alter past records.
+  </Accordion>
+
+  <Accordion title="How do before/after photo pairs work in a work order process?">
+    When a step uses a before/after photo pair input, the technician is prompted to take the "before" photo when the step is first opened — before any work on that step begins. The "after" photo is prompted when the technician marks the step complete. Both photos are stored on the work order record and displayed side by side for easy comparison.
+  </Accordion>
+</AccordionGroup>

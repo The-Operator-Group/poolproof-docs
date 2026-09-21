@@ -1,0 +1,125 @@
+---
+title: "Logging In and Managing Authentication in PoolProof"
+sidebarTitle: "Authentication"
+description: "Set up Google or Microsoft SSO, require company-wide social login, and manage customer portal access and multi-organization accounts in PoolProof."
+---
+
+PoolProof supports multiple ways to log in — email and password, Google, or Microsoft — and gives you control over which methods your team is allowed to use. This page covers how each login option works, how to require company-wide single sign-on (SSO), how your customers log into the customer portal, and how multi-organization accounts work.
+
+---
+
+## Login Options for Your Team
+
+Every PoolProof team member can log in using any of three methods:
+
+<CardGroup cols={3}>
+  <Card title="Email and Password" icon="envelope">
+    The standard login method. Enter your email address and password on the PoolProof login screen.
+  </Card>
+  <Card title="Sign in with Google" icon="google">
+    Use your existing Google or Google Workspace account. Click **Sign in with Google** on the login screen — no separate PoolProof password needed.
+  </Card>
+  <Card title="Sign in with Microsoft" icon="microsoft">
+    Use your existing Microsoft or Microsoft 365 account. Click **Sign in with Microsoft** on the login screen — no separate PoolProof password needed.
+  </Card>
+</CardGroup>
+
+Google and Microsoft login buttons appear on the PoolProof login screen by default. Your team members can start using them immediately — no setup required on their end.
+
+---
+
+## Why Use Google or Microsoft Login?
+
+Using Google or Microsoft to sign in solves a common problem for growing pool service businesses: password management at scale.
+
+When your team signs in through Google or Microsoft, they use an account they already access every day. There's no new credential to create, forget, or reset. Common problems — a technician locked out in a customer's driveway because they can't remember their password — go away.
+
+Beyond convenience, Google and Microsoft handle security automatically:
+
+- **Two-factor authentication** — managed at the identity provider level, without you configuring anything in PoolProof
+- **Suspicious login detection** — Google and Microsoft flag and block unusual login attempts
+- **Device management** — your existing corporate device policies apply automatically
+
+### Automatic Lockout When Employees Leave
+
+This is the most operationally important reason to use SSO for your team. If you use Google Workspace or Microsoft 365 and you've enabled **Require Social Login** in PoolProof, deactivating a departing employee's corporate account immediately locks them out of PoolProof as well.
+
+No separate step. No hoping someone remembered to revoke access. The moment their Google or Microsoft account is deactivated, their PoolProof access is gone.
+
+---
+
+## Requiring SSO Company-Wide
+
+By default, your team can use any login method. If you want to enforce consistency and take advantage of automatic lockout, you can require Google or Microsoft login for your entire organization.
+
+<Steps>
+  <Step title="Open Settings">
+    In PoolProof, navigate to **Settings** in the main navigation.
+  </Step>
+  <Step title="Go to Security">
+    Select the **Security** tab within Settings.
+  </Step>
+  <Step title="Enable Require Social Login">
+    Toggle on **Require Social Login**. Once enabled, email and password login is disabled company-wide. All team members must sign in through Google or Microsoft.
+  </Step>
+</Steps>
+
+<Warning>
+  Before enabling Require Social Login, confirm that every team member has access to a Google or Microsoft account they can use to sign in. Team members without an eligible account will be locked out until the requirement is configured or they're provided an account.
+</Warning>
+
+---
+
+## Customer Portal Login
+
+Your customers access the PoolProof customer portal through a separate login flow from your team. Customers can authenticate using either:
+
+<Tabs>
+  <Tab title="Email and Password">
+    Customers create a username and password when they first access the portal. They use these credentials on return visits. Standard account recovery via email is available.
+  </Tab>
+  <Tab title="Magic Link (Passwordless)">
+    Customers enter their email address and receive a one-time login link — no password required. The link is valid for a single session. This is the simplest experience for customers who don't want to manage another password.
+  </Tab>
+</Tabs>
+
+The customer portal lets your customers view service history and past invoices, make payments, update their payment method on file, and request services — all without calling your office.
+
+---
+
+## Multi-Organization Support
+
+If you manage more than one business entity in PoolProof — for example, if you own multiple pool service companies, or if a team member works across multiple organizations — PoolProof supports belonging to multiple organizations under a single login.
+
+Users with access to multiple organizations can switch between them seamlessly from their account menu without logging out and back in. Each organization's data remains fully separate.
+
+<Info>
+  Multi-organization support is useful for franchise operations, business partnerships, or managers who oversee multiple service regions set up as separate PoolProof accounts.
+</Info>
+
+---
+
+## Role-Based Access Control
+
+Authentication (getting into PoolProof) is separate from authorization (what you can do once you're in). PoolProof's role-based access control system lets you assign each team member a role that defines exactly what they can see and do.
+
+Five built-in roles cover most pool service team structures:
+
+| Role | Access Level |
+|---|---|
+| **Owner** | Full, unrestricted access — cannot be modified or deleted |
+| **Administrator** | Access to virtually everything except owner-level settings |
+| **Regional Manager** | Customers, routes, quotes, work orders, and team oversight |
+| **Sales** | Customer management and quoting — no route execution or billing |
+| **Service Technician** | Assigned routes, service execution, readings, and notes |
+
+You can also create custom roles from scratch using over 60 individual capabilities, scoped precisely to your team structure. For more detail, see the [Roles & Permissions](/getting-started/roles-and-permissions) page.
+
+---
+
+## Getting Help
+
+If you have questions about configuring SSO, setting up roles, or managing team access, contact PoolProof support:
+
+- **Phone:** [(210) 245-7495](tel:+12102457495)
+- **Email:** [info@poolproof.com](mailto:info@poolproof.com)

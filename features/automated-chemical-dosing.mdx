@@ -1,0 +1,144 @@
+---
+title: "Automated Chemical Dosing for Pool Service Techs"
+sidebarTitle: "Chemical Dosing"
+description: "Stop overdosing and wasting money. PoolProof calculates exact chemical amounts for every pool using validated chemistry algorithms — no guessing needed."
+---
+
+PoolProof's automated chemical dosing feature takes the guesswork out of every service stop. Instead of relying on instinct or rough estimates, your technicians get exact dosing amounts calculated by a validated chemistry engine — so every pool gets precisely what it needs, every visit.
+
+## How the Dosing Engine Works
+
+When your tech arrives at a pool, they enter their test readings into PoolProof. The dosing engine immediately runs those numbers through polynomial equations and molecular-weight-based formulas that model the complex interactions between pool chemistry variables. The result: a clear list of exactly what to add and how much — down to the ounce.
+
+<Steps>
+  <Step title="Tech records water readings">
+    At the pool, your tech enters the current test results directly in PoolProof. Only the readings that are due for that visit need to be logged — skip the rest.
+  </Step>
+  <Step title="Engine calculates dosing amounts">
+    PoolProof's chemistry algorithms process the readings, accounting for pool volume, product interactions, and the Langelier Saturation Index (LSI). All calculations run instantly in the background.
+  </Step>
+  <Step title="Tech sees exactly what to add">
+    The results screen shows each chemical and the precise quantity to apply. No math, no charts, no second-guessing.
+  </Step>
+  <Step title="Adjustments are saved to the record">
+    If field conditions warrant a change — heavy bather load, visible algae, recent rain — the tech can edit the applied quantities. The actual amounts used are saved to the service record.
+  </Step>
+</Steps>
+
+<Note>
+  All dosing calculations are validated against 199 automated tests that verify accuracy across a wide range of chemistry scenarios. Input validation also prevents erroneous results from out-of-range readings.
+</Note>
+
+## Supported Water Readings
+
+PoolProof supports all the readings your techs take in the field. Log any combination of the following during a service visit:
+
+<CardGroup cols={3}>
+  <Card title="Free Chlorine" icon="flask">
+    The primary sanitizer level for chlorinated pools.
+  </Card>
+  <Card title="Total Chlorine" icon="flask">
+    Combined free and combined chlorine; used to detect chloramine buildup.
+  </Card>
+  <Card title="Bromine" icon="flask">
+    For bromine-sanitized pools and spas.
+  </Card>
+  <Card title="pH" icon="droplet">
+    The single most impactful variable in water balance and sanitizer effectiveness.
+  </Card>
+  <Card title="Total Alkalinity" icon="droplet">
+    The buffering capacity that stabilizes pH against rapid swings.
+  </Card>
+  <Card title="Calcium Hardness" icon="droplet">
+    Protects plaster surfaces and equipment from scaling or corrosion.
+  </Card>
+  <Card title="Cyanuric Acid" icon="sun">
+    Stabilizer that protects chlorine from UV degradation.
+  </Card>
+  <Card title="Salt" icon="waves">
+    For saltwater chlorine generator pools.
+  </Card>
+  <Card title="Total Dissolved Solids" icon="waves">
+    Overall mineral load; tracks when a partial drain-and-refill is needed.
+  </Card>
+  <Card title="Temperature" icon="thermometer">
+    Factored into LSI calculations and sanitizer demand.
+  </Card>
+  <Card title="Phosphates" icon="leaf">
+    Nutrient source for algae; tracked to evaluate phosphate remover needs.
+  </Card>
+</CardGroup>
+
+## Key Dosing Features
+
+### Adaptive Chlorination
+
+Rather than using a fixed free chlorine target for every pool, adaptive chlorination scales the FC target automatically based on the pool's current cyanuric acid (CYA) level. This follows the best practice of keeping chlorine proportional to stabilizer for effective sanitation as CYA gradually rises over a season.
+
+Configure the target as a percentage of CYA — for example, **10% of CYA** — and PoolProof handles the rest:
+
+| CYA Level | FC Target (at 10%) |
+|---|---|
+| 30 ppm | 3 ppm |
+| 50 ppm | 5 ppm |
+| 80 ppm | 8 ppm |
+| 100 ppm | 10 ppm |
+
+<Tip>
+  Adaptive chlorination is especially useful for pools with variable bather loads or outdoor exposure, where CYA creeps up throughout the season and a fixed FC target would leave the pool under-sanitized.
+</Tip>
+
+### LSI Automatic Calculation
+
+The Langelier Saturation Index tells you whether water is corrosive, scaling, or balanced — but nobody has time to compute it at every stop. PoolProof calculates LSI automatically from every set of readings and factors it directly into the dosing recommendations. Your techs protect surfaces and equipment without ever doing the math themselves.
+
+### Flexible Test Frequencies
+
+Not every parameter changes at the same rate. Calcium hardness in a well-maintained pool might only need checking monthly; free chlorine should be tested every visit. PoolProof lets you set independent test frequencies for each reading type so techs only log what's actually due — fewer steps per stop, same quality data.
+
+<Info>
+  Readings that aren't due on a given visit are skipped automatically. The most recent logged value is used in calculations until the next reading is recorded.
+</Info>
+
+### Your Chemical Lineup
+
+Every service business runs different products. Set up the dosing calculator to match exactly what you stock, and your techs get recommendations they can act on immediately — not generic suggestions for products you don't carry. PoolProof supports over **40 treatment products** across all major chemical categories.
+
+<Accordion title="What categories of products are supported?">
+  PoolProof covers the full range of pool treatment products, including:
+
+  - **Chlorine sources** — liquid chlorine (sodium hypochlorite), trichlor tablets, dichlor granules, calcium hypochlorite
+  - **pH adjusters** — muriatic acid, sodium carbonate (soda ash), sodium bicarbonate
+  - **Alkalinity adjusters** — sodium bicarbonate, sodium carbonate
+  - **Calcium adjusters** — calcium chloride
+  - **CYA (stabilizer)** — cyanuric acid
+  - **Algaecides** — copper-based and non-copper formulas
+  - **Phosphate removers**
+  - **Salt** for SWG systems
+  - **Custom products** — if you use a specialty product not in the default list, you can add it with the appropriate chemical properties
+</Accordion>
+
+### Technician Override
+
+PoolProof's dosing recommendations are a starting point, not a locked prescription. If a tech observes conditions that warrant a different amount — such as visible algae, a recent pool party, or a storm the night before — they can open the edit modal and enter the actual quantities applied. Those adjusted figures are saved to the service record, maintaining a full and accurate chemical history for every pool.
+
+<Warning>
+  Always log the actual quantities applied, not just the recommended amounts. Accurate records protect you if a customer ever questions water quality or chemical use.
+</Warning>
+
+## Business Impact
+
+<CardGroup cols={2}>
+  <Card title="Eliminate Overdosing" icon="circle-dollar-to-slot">
+    When techs guess, they add extra to be safe — and you pay for it. Exact calculations stop that waste immediately.
+  </Card>
+  <Card title="Consistent Results Across All Techs" icon="users">
+    Whether it's your most experienced tech or your newest hire, every pool gets the same rigorous calculation applied.
+  </Card>
+  <Card title="Protect Equipment and Surfaces" icon="shield-check">
+    LSI-aware dosing keeps water balanced so it doesn't corrode heaters, etch plaster, or scale salt cells.
+  </Card>
+  <Card title="Faster Service Stops" icon="gauge-high">
+    Techs spend less time puzzling over charts and more time moving efficiently through their route.
+  </Card>
+</CardGroup>

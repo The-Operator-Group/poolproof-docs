@@ -1,0 +1,197 @@
+---
+title: "Pool Service Software Migration Checklist"
+sidebarTitle: "Migration Checklist"
+description: "A step-by-step checklist for switching pool service software — what to export, what gets left behind, and how to cut over without losing a stop."
+---
+
+This migration checklist walks you through every practical step of switching pool service software — from choosing the right moment to cut over to the seven questions that tell you what kind of migration you're actually buying. Use it alongside your vendor evaluation so you arrive at go-live with your route data intact and your team ready.
+
+## Choose the Right Moment to Cut Over
+
+Timing your cutover poorly is the single easiest mistake to avoid in a software migration. The window you choose determines how much disruption your customers, technicians, and billing cycle absorb.
+
+**End of billing cycle.** Switching mid-cycle means reconciling partial invoices across two systems. Cut at the end of a billing period so every customer's next invoice is generated entirely in PoolProof.
+
+**End of service week.** Wrap up your last scheduled stops in the old system before going live. That way every service record for a given week lives in one place.
+
+**Shoulder season if possible.** Spring opening and fall closing are the worst times to learn new software. If you have a choice, migrate in a slower month. You'll have more margin for technician training and parallel running without the pressure of peak call volume.
+
+<Note>
+If you must switch mid-season, you can still do it cleanly — but complete your full data export and payment method handling before your next billing run. Never let the billing clock force a rushed migration.
+</Note>
+
+## What to Export Before You Give Notice
+
+Pull all of this from your current platform **before you cancel your account**. Once the account closes, your export window closes with it.
+
+<CardGroup cols={2}>
+
+<Card title="Customers and Properties" icon="users">
+- Customer names, service addresses, billing addresses, phones, and emails
+- Secondary contacts: spouses, property managers, tenants
+- Multiple service locations per customer and multiple bodies of water per location
+- Access information: gate codes, lock box combinations, dog warnings, access notes
+</Card>
+
+<Card title="Service Setup" icon="calendar-days">
+- Service plan, frequency, and the **actual price** each customer pays — not your list price
+- Billing terms, autopay status, and tax exemption status
+- Route assignment and scheduled service day for every stop
+- Custom checklists, SOPs, and task lists your technicians follow
+</Card>
+
+<Card title="Service History" icon="clock-rotate-left">
+- Visit dates, assigned technician, and tasks completed
+- Chemical readings per visit: free chlorine, pH, alkalinity, calcium hardness, CYA, salt, temperature
+- Chemicals and products used with quantities
+- Technician notes and skipped-stop reasons
+- Photos and attachments — download these separately; they don't live in CSVs
+</Card>
+
+<Card title="Equipment Records" icon="gears">
+- Pump, filter, heater, salt cell, and automation system details
+- Sanitation type and method, filter type
+- Serial numbers, install dates, and warranty dates per body of water
+</Card>
+
+<Card title="Money and Open Work" icon="file-invoice-dollar">
+- Open invoices and full paid invoice history
+- Receivables aging report
+- Credits, deposits, and prepayments
+- Open work orders and repairs in progress
+- Quotes sent but not yet approved
+- Signed service agreements
+</Card>
+
+<Card title="Users and Access" icon="id-card">
+- Staff accounts, roles, and permission levels
+- Note any role-based access exceptions before recreating accounts in the new system
+</Card>
+
+</CardGroup>
+
+<Tip>
+Print the export checklist and hand it to every vendor you evaluate. Ask them to mark which lines they will migrate for you. How they answer — and how specifically — tells you more than any demo.
+</Tip>
+
+## Data That Usually Doesn't Survive the Move
+
+Four categories get left behind quietly in almost every pool software migration. The first three surface months later, usually at the worst moment.
+
+**Photos and attachments.** Spreadsheet exports give you filenames or URLs that stop resolving the day your old account closes. If you've been photographing equipment condition for dispute protection, that library won't automatically follow you. Download and back up every photo that matters before canceling.
+
+**Reading history as structured records.** A flat spreadsheet of visit dates and chemical numbers is real and useful — but it's not the same as a reading tied to a specific visit, tied to a specific body of water, tied to the equipment on that pad. Getting the file is easy. Getting it to land as a usable, queryable service record on the other side is the real work, and it depends entirely on what your old system exports and whether the new vendor's team does the import work for you.
+
+**Saved payment methods and autopay authorizations.** Your customers' cards are vaulted with the payment processor, not stored in the software. Switching platforms often means switching processors, and card tokens don't follow automatically. Ask about a vault-to-vault transfer before you commit to anything. If one isn't available, you're re-collecting authorization from every autopay customer — plan that campaign before your next billing run, not during it.
+
+**Anything living in someone's head or phone.** Verbal agreements, informal service exceptions, and technician-only access knowledge don't exist until they're written down. Migration is the right moment to capture them.
+
+## Step-by-Step Migration Checklist
+
+<Steps>
+
+### Pick your seam
+
+Cut at the end of a billing cycle and the end of a service week. Shoulder season if you have the choice. Never at spring opening.
+
+### Export everything and verify the files open
+
+Before you give notice on your current platform — not after. Open each export file and confirm the data is readable and complete.
+
+### Audit the export
+
+This is where you find duplicate accounts, stale addresses, and customers still paying 2019 pricing. Fix errors in the spreadsheet while it's easy to bulk-edit. One afternoon in a CSV beats one customer at a time in a web interface.
+
+### Load and review — don't load and hope
+
+Spot-check at least 20 customers across your different service plans. Confirm that price, frequency, service day, equipment details, and access codes all landed correctly. Verify a few service history records against your old system.
+
+### Rebuild routes instead of porting them
+
+Your current routes carry years of accumulated exceptions and workarounds. A clean optimization pass at migration almost always finds drive time you would otherwise keep paying for. Use migration as an opportunity to let your new routing tools start fresh.
+
+### Train your technicians before go-live — not on go-live morning
+
+Schedule 15-minute sessions in the yard the week before cutover. Walk through the mobile app, show how to log a visit and record readings, and answer questions in a low-stakes environment. Technician adoption is the top failure point in every migration in this industry.
+
+### Run one service week in parallel
+
+Technicians work in the new system; office staff reconcile against the old one. One week is enough to catch anything that didn't land right. Three months of parallel running means you never actually switched.
+
+### Handle payment methods deliberately
+
+Complete the payment processor vault transfer or run a re-authorization campaign with autopay customers before the first billing run in the new system — never during it.
+
+### Cut billing last
+
+After at least one clean service cycle has run through the new system. Let the service side prove itself before you depend on it for billing.
+
+### Keep read-only access to the old system for 12 months
+
+You'll want it for disputes, warranty questions, and the chemical history you didn't think you'd need to reference.
+
+</Steps>
+
+## Seven Questions to Ask Any Vendor Before You Sign
+
+Get the answers to all seven in writing before you commit.
+
+<Accordion title="Who does the migration work — your team or mine?">
+This is the most important question. There are three very different products sold under the label "migration support": a self-service import template, an assisted import where someone is available while you do the work, and a done-for-you migration where the vendor's team does it. If the answer involves a template and a help article, that's your answer — and that's your team's weekend.
+
+Ask specifically: who fills in the columns, who does the data cleanup, and who loads the records.
+</Accordion>
+
+<Accordion title="Which fields come across?">
+Ask for line-by-line confirmation against your full export checklist. Customers and addresses are the easy part. Ask specifically about secondary contacts, equipment serial numbers, service history with chemical readings, billing history, credits, open work orders, and signed agreements. Vague answers here become your problem at go-live.
+</Accordion>
+
+<Accordion title="Do photos and attachments come across, or just the data?">
+Almost no vendor moves your photo library automatically, because photos don't live in spreadsheet exports. But the answer tells you a great deal about how thorough the vendor's migration process actually is. If they haven't thought about photos, ask yourself what else they haven't thought about.
+</Accordion>
+
+<Accordion title="What happens to saved payment methods and autopay authorizations?">
+Ask specifically: is a compliant vault-to-vault transfer between payment processors possible? If not, how does the vendor recommend handling re-authorization for autopay customers, and does their team help run that campaign? This question has derailed more migrations than any technical data issue.
+</Accordion>
+
+<Accordion title="Do I see my own data loaded in a real account before I commit?">
+Reviewing a demo account populated with generic data is a completely different experience from logging into an account that already contains your customers, your routes, and your service history. Vendors who will load your real data before you commit are telling you something about their confidence in the product. Vendors who won't are also telling you something.
+</Accordion>
+
+<Accordion title="What is my go-live date, in writing?">
+"Most customers are live within 30 days" is very different from a committed go-live date in your agreement. Get the date in writing, confirm what triggers it, and understand what happens if the timeline slips.
+</Accordion>
+
+<Accordion title="When I eventually leave, what do I get — and how fast, and at what cost?">
+A vendor who answers this question cleanly — specific data formats, specific timelines, no exit fee — is signaling that they plan to keep you by being good rather than by making it hard to leave. A vendor who hedges is showing you their hand. Ask it even if you aren't planning to leave. The answer tells you how they think about the relationship.
+</Accordion>
+
+## Tips From Operators Who Have Done It
+
+<Tip>
+**Don't clean your data in the new system. Clean it in the spreadsheet.** Bulk-editing 400 records in a CSV takes an afternoon. One customer at a time in a web interface takes a week. Do the cleanup before the import, not after.
+
+**Tell your customers something.** If your customer portal URL or sender email address changes, one proactive message prevents a full week of "is this a scam?" calls from customers who don't recognize the new sender.
+
+**Let your best technician break it first.** Give one experienced field tech the new mobile app a week early and ask them to find what's confusing. They'll surface in two days what you would otherwise learn from the entire crew on go-live morning — when it's too late to fix without disrupting service.
+
+**Keep a quarterly export from whatever platform you land on.** Make it a recurring calendar task. It turns your next software decision into a choice instead of a trap.
+</Tip>
+
+## What to Do Next
+
+The right vendor answers every question above specifically and in writing, shows you your own data before asking for a commitment, and does the migration work themselves. If you're evaluating PoolProof, the migration happens before you sign or pay anything — your customers, routes, and service history land in a real account for you to review first.
+
+Reach out to start the conversation:
+
+<CardGroup cols={2}>
+
+<Card title="Call PoolProof" icon="phone">
+**(210) 245-7495** — speak with someone who can scope your specific migration, answer questions about your current platform, and walk you through what the review account will look like.
+</Card>
+
+<Card title="Email PoolProof" icon="envelope">
+**info@poolproof.com** — include your current platform name and an approximate customer count to get a faster migration estimate.
+</Card>
+
+</CardGroup>

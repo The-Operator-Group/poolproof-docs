@@ -1,32 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "PoolProof",
+  "projectType": "saas",
+  "projectName": "PoolProof",
+  "projectDescription": "PoolProof is an all-in-one pool service management platform that automates routing, scheduling, billing, customer communication, and chemical dosing for pool service businesses.",
   "theme": "almond",
-  "colors": {
-    "primary": "#33a2f9",
-    "light": "#144c7c",
-    "dark": "#040709"
-  },
-  "logo": {
-    "light": "https://media.brand.dev/b86ad317-f03f-49c1-a41e-cf42b0490fa0.svg",
-    "dark": "https://media.brand.dev/b86ad317-f03f-49c1-a41e-cf42b0490fa0.svg"
-  },
-  "favicon": "https://media.brand.dev/aca1b017-f43c-461a-abd9-fa56447d0c4b.jpg",
-  "fonts": {
-    "heading": {
-      "family": "Rubik"
-    },
-    "body": {
-      "family": "Rubik"
-    }
-  },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Schedule a Demo",
-      "href": "https://poolproof.com/schedule-a-demo"
-    }
-  },
+  "primaryColor": "#33a2f9",
+  "lightColor": "#144c7c",
+  "darkColor": "#040709",
   "navigation": {
     "tabs": [
       {
@@ -126,7 +105,36 @@
       }
     ]
   },
-  "footer": {
-    "socials": {}
-  }
+  "keyFeatures": [
+    "Intelligent route optimization with automatic rebalancing and disruption handling",
+    "Digital Team Members (AI assistants for communication, routing, billing, and QA)",
+    "Automated chemical dosing with validated chemistry algorithms and LSI calculations",
+    "Centralized inbox for SMS, WhatsApp, email, and social messages",
+    "Automatic invoicing, ACH/card collections, and QuickBooks Online sync",
+    "Customer self-serve portal with service history, invoices, and payments",
+    "Self-serve online signup with service area validation and digital agreements",
+    "Process management with phased workflows (Before / During / After)",
+    "Service plans and areas with configurable pricing, chemical protocols, and maintenance schedules",
+    "Quoting and work orders with smart scheduling, conflict detection, and electronic approvals",
+    "Issue tracking with AI-powered intake and work order linkage",
+    "Fleet management with mileage tracking and preventive maintenance scheduling",
+    "Built-in email marketing with segmentation and drag-and-drop editor",
+    "Role-based access control with 60+ capabilities and Google/Microsoft SSO",
+    "White-glove onboarding and done-for-you data migration"
+  ],
+  "publicApiSurface": [
+    "Customer portal (self-service invoices, payments, service history)",
+    "Self-serve signup page (embeddable URL for websites)",
+    "QuickBooks Online integration (invoice, payment, refund, tax sync)",
+    "Google Authentication / Microsoft Authentication (SSO)",
+    "SMS, WhatsApp, email, Facebook message inbox",
+    "Route optimization algorithm",
+    "Automated chemical dosing engine (free chlorine, pH, alkalinity, CYA, LSI)",
+    "Role-based access control (Owner, Administrator, Regional Manager, Sales, Service Technician, custom roles)",
+    "Email marketing campaigns with segmentation",
+    "Settings → Inbox AI → Intelligent Assignment",
+    "Settings → Notifications → SMS Notifications",
+    "Settings → Security → Require Social Login",
+    "Settings → Roles"
+  ]
 }

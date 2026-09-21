@@ -1,0 +1,167 @@
+---
+title: "Service Plans and Areas: Configure Your Tiers Once"
+sidebarTitle: "Service Plans"
+description: "Configure service areas, unlimited service plans, and multiple price points so every customer gets consistent service without per-customer setup."
+---
+
+Service Plans and Areas is the configuration layer that ties your geographic territories, your service tiers, and your pricing together. This page explains how service areas organize your customer base and technician assignments, how service plans define billing, workflows, chemical protocols, and periodic maintenance, and how multiple price points let you charge different rates for the same service without duplicating your setup.
+
+---
+
+## The Three Building Blocks
+
+<CardGroup cols={3}>
+  <Card title="Service Areas" icon="map">
+    Geographic territories that organize your operation. Every customer and every technician belongs to a service area. New customers are auto-assigned to the correct area based on their address, and inventory can be managed on a per-area basis.
+  </Card>
+  <Card title="Service Plans" icon="clipboard-list">
+    The full definition of what a customer receives: billing settings, technician process steps, chemical reading requirements, dosing protocols, and periodic maintenance tasks. Create unlimited plans — basic, premium, salt, commercial, seasonal, or anything your business offers.
+  </Card>
+  <Card title="Price Points" icon="tag">
+    Multiple pricing variations for the same plan. Charge more in premium neighborhoods, offer introductory rates for new customers, or separate commercial and residential pricing — all without creating duplicate service definitions.
+  </Card>
+</CardGroup>
+
+---
+
+## Service Areas
+
+A service area is the geographic territory your business operates in. You can define one area or many — one per city, one per region, one per team, or any structure that matches how you run your routes.
+
+**What service areas control:**
+
+- **Customer assignment** — every customer belongs to exactly one service area. When a new customer is added (or signs up through the self-serve portal), PoolProof validates their address against your defined areas and assigns them automatically.
+- **Technician assignment** — technicians can belong to one or more service areas. A tech who works across two territories sees customers from both; a tech who stays in one area sees only that area's stops.
+- **Inventory management** — if you track stocked chemicals or parts, inventory can be managed per service area with its own reorder thresholds.
+
+<Info>
+  Service area boundaries work in combination with PoolProof's self-serve customer signup flow. When a prospective customer enters their address on your signup page, PoolProof checks whether that address falls within an active service area before allowing the signup to proceed. No manual gatekeeping required.
+</Info>
+
+---
+
+## Service Plans
+
+A service plan is the single source of truth for what every customer on that tier receives. Define it once, assign it to as many customers as you like, and every technician follows the same standard without any per-customer configuration.
+
+### What a Service Plan Defines
+
+<Tabs>
+  <Tab title="Billing">
+    Each service plan includes billing settings that apply automatically to every customer assigned to it:
+
+    - **Billing frequency** — per visit or per month
+    - **Billing timing** — advance (billed before service) or arrears (billed after)
+    - **Chemical billing** — chemicals included in the plan price, or itemized separately on each invoice based on actual usage
+    - **Taxation** — sales tax is calculated automatically from the customer's billing address; no tax tables to maintain
+  </Tab>
+  <Tab title="Process Steps">
+    Each plan includes a defined workflow — the steps technicians follow during every visit. A basic maintenance plan might have a streamlined process. A premium plan might add detailed equipment inspection steps, additional photo documentation, or specific timing requirements.
+
+    Process steps are organized into three phases that match how service naturally flows:
+
+    1. **Before Service** — site and equipment inspection before touching the water
+    2. **During Service** — chemical testing, treatment, and cleaning tasks
+    3. **After Service** — final checks, customer-facing documentation, and photo capture
+
+    Different plans can have entirely different process workflows. The plan determines the process, and the process enforces consistency across every technician on every visit.
+  </Tab>
+  <Tab title="Chemical Protocols">
+    Chemical settings on a plan define what readings technicians capture and which chemicals are available for dosing. For each reading type you can choose:
+
+    - **Automated dosing** — PoolProof calculates the required dose based on the reading and pool volume; the technician adds the calculated amount
+    - **Manual dosing** — the technician records what was added; no system-calculated suggestion
+    - **Monitoring only** — the reading is captured for tracking purposes; no dosing action is required
+
+    Reading requirements can also be configured at the plan level to be required at every stop, required at a defined frequency (e.g., every fourth visit), or optional.
+  </Tab>
+  <Tab title="Periodic Maintenance">
+    Periodic maintenance tasks cover the work that doesn't happen at every visit but is easy to let slip — filter cleanings, equipment inspections, backwashing, and salt cell cleaning.
+
+    For each periodic task you configure:
+
+    - **Frequency** — how often the task should occur (e.g., every 90 days, every 6 months)
+    - **Scheduling mode** — completed at the next regular service visit, or scheduled as a separate standalone appointment
+    - **Tracking** — PoolProof monitors what's due and ensures nothing falls through the cracks
+
+    Auto-scheduling is available for filter cleans, filter replacements, salt cell cleanings, and equipment testing. Once configured on the plan, these jobs appear on the correct route automatically at the right intervals.
+  </Tab>
+</Tabs>
+
+---
+
+## Multiple Price Points per Plan
+
+The same service definition can have unlimited price points. This means you never have to build duplicate plans just to support different pricing for the same service level.
+
+**Common uses for multiple price points:**
+
+- Charge a higher rate in premium or high-cost neighborhoods
+- Offer an introductory rate for new customers without changing your standard pricing
+- Separate commercial pricing from residential pricing on the same plan
+- Run promotional pricing for a season without altering your standard tier
+
+When you assign a customer to a plan, you select which price point applies to that account. The service definition — chemical protocols, process steps, maintenance schedule — is identical across all price points on the plan. Only the price changes.
+
+<Note>
+  Price points support all billing configurations: per visit or monthly, advance or arrears billing, and chemicals included or itemized. Each price point can have its own billing settings within the same plan.
+</Note>
+
+---
+
+## Configurable Reading Requirements
+
+Reading requirements determine what chemical data technicians are expected to capture at each stop. You configure these at the plan level rather than individually per customer, so your entire customer base on a given tier stays consistent automatically.
+
+| Configuration | Behavior |
+|---|---|
+| Required every visit | Tech cannot close the stop without recording this reading |
+| Required at a set frequency | Required once every N visits; monitoring-only on in-between visits |
+| Optional | Prompted but not blocking; tech can skip if not applicable |
+
+When you update reading requirements on a plan, the change applies immediately to all customers on that plan — no need to update each account individually.
+
+---
+
+## Unlimited Plans
+
+You can create as many service plans as your business needs. There is no cap. Build distinct plans for:
+
+- Weekly vs. bi-weekly maintenance
+- Chlorine vs. salt water pools
+- Residential vs. commercial accounts
+- Premium white-glove tiers with additional inspection steps
+- Seasonal opening and closing services
+- Specialty services like spa-only maintenance
+
+Each plan carries its own full configuration — billing, process, chemicals, and maintenance — and is fully independent of every other plan.
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How do customers get assigned to a service area?">
+    New customers are assigned to a service area based on their address. When you add a customer manually, PoolProof shows you the nearest service area and assigns it automatically. When a customer signs up through your self-serve portal, PoolProof validates their address against your defined areas before completing the signup.
+  </Accordion>
+
+  <Accordion title="Can I move a customer from one service plan to another?">
+    Yes. You can reassign a customer to a different plan at any time from their account. The new plan's billing settings, process steps, chemical protocols, and maintenance schedule take effect on the next service visit. Historical service records remain tied to whatever plan was active at the time of each visit.
+  </Accordion>
+
+  <Accordion title="Can one plan have multiple prices for different billing modes — for example, one price per visit and a different monthly price?">
+    Yes. Price points support all billing configurations independently. You could have one price point that bills per visit in advance and another price point on the same plan that bills monthly in arrears. Assign the appropriate price point when setting up each customer.
+  </Accordion>
+
+  <Accordion title="What happens to periodic maintenance tracking if a customer moves to a different plan?">
+    PoolProof carries over the maintenance history. If a customer switches plans, past filter cleanings and equipment inspections are still on record, and the new plan's maintenance schedule picks up from the date of the last completed task.
+  </Accordion>
+
+  <Accordion title="Can a technician belong to more than one service area?">
+    Yes. Technicians can belong to one or more service areas. When a tech is assigned to multiple areas, they can be scheduled for stops across all of their assigned territories. This is useful for techs who cover multiple regions or for cross-coverage during absences.
+  </Accordion>
+
+  <Accordion title="How does chemical billing work when chemicals are itemized?">
+    When a plan is configured to itemize chemicals, PoolProof records the type and quantity of each chemical added during the visit. Those line items are added to the invoice automatically, priced from your product catalog. This gives customers a transparent breakdown and ensures you recover chemical costs accurately.
+  </Accordion>
+</AccordionGroup>

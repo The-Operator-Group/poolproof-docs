@@ -1,0 +1,105 @@
+---
+title: "Adding Team Members and Managing Logins"
+sidebarTitle: "Team Members"
+description: "Invite technicians, office staff, and managers to PoolProof, assign roles, and set up Google or Microsoft SSO for fast, secure team onboarding."
+---
+
+PoolProof makes it straightforward to bring your team onto the platform, assign the right level of access, and keep logins secure without adding administrative overhead. This page covers how to invite a new team member, how login options work, and how to enforce company-wide authentication policies.
+
+## Inviting a New Team Member
+
+Adding someone to your PoolProof account takes less than a minute. Once you send the invitation, the new team member receives an email with a link to set up their access.
+
+<Steps>
+  <Step title="Open the Team Settings">
+    Navigate to **Settings > Team** and click **Invite Team Member**.
+  </Step>
+  <Step title="Enter Their Details">
+    Fill in the team member's name and email address. These details populate their profile and determine where the invitation is sent.
+  </Step>
+  <Step title="Assign a Role">
+    Select a role from the dropdown. The role determines exactly what the team member can see and do in PoolProof. If none of the built-in roles fit, create a custom role first in **Settings > Roles** and it will appear in the list here.
+  </Step>
+  <Step title="Send the Invitation">
+    Click **Send Invite**. The team member receives an email with a link to complete their setup. They can sign in using an email/password combination or connect instantly with their existing Google or Microsoft account.
+  </Step>
+</Steps>
+
+<Tip>
+  You can edit a team member's role at any time by opening their profile in **Settings > Team** and selecting a new role. The change takes effect immediately.
+</Tip>
+
+## Login Options
+
+Every team member can sign in to PoolProof using either of two methods. Both are supported on the web app and the mobile app.
+
+<Tabs>
+  <Tab title="Email & Password">
+    Team members create a password during account setup and use their email address to sign in. This is the standard option and works for any team member regardless of which tools your company uses.
+
+    <Note>
+      If your company requires Google or Microsoft logins (see the Security section below), email/password login is disabled company-wide and this option will not be available.
+    </Note>
+  </Tab>
+  <Tab title="Google or Microsoft SSO">
+    Team members sign in using the Google or Microsoft account they already use every day — no new password required. On the PoolProof login screen, they tap **Sign in with Google** or **Sign in with Microsoft** and are in within seconds.
+
+    This option is available to all team members immediately. No configuration is required to enable it for individual use.
+  </Tab>
+</Tabs>
+
+## Benefits of Google and Microsoft SSO
+
+Switching your team to Google or Microsoft logins eliminates the most common login friction points in pool service operations.
+
+<CardGroup cols={2}>
+  <Card title="Onboarding in Seconds" icon="bolt">
+    Invite a new technician and they can be logged in from the parking lot before their first day starts. No temporary passwords, no phone calls, no waiting.
+  </Card>
+  <Card title="No More Password Reset Calls" icon="phone-slash">
+    If your tech can get into their Gmail or Outlook, they can get into PoolProof. Forgotten passwords at a customer's driveway become a thing of the past.
+  </Card>
+  <Card title="Enterprise-Grade Security" icon="shield-halved">
+    Google and Microsoft handle two-factor authentication, suspicious login detection, and device management automatically — with no configuration required on your end.
+  </Card>
+  <Card title="Instant Lockout When Someone Leaves" icon="lock">
+    When you deactivate a departed employee's Google Workspace or Microsoft 365 account, they are locked out of PoolProof automatically. No separate offboarding step, no risk of forgotten access.
+  </Card>
+</CardGroup>
+
+## Requiring SSO Company-Wide
+
+For businesses that want a single, auditable authentication method across every employee, you can disable email/password login entirely and require everyone to use Google or Microsoft.
+
+<Steps>
+  <Step title="Go to Security Settings">
+    Navigate to **Settings > Security**.
+  </Step>
+  <Step title="Enable Require Social Login">
+    Toggle on **Require Social Login**. Once enabled, email/password login is disabled for all team members. Everyone must sign in with Google or Microsoft.
+  </Step>
+</Steps>
+
+<Warning>
+  Before enabling **Require Social Login**, confirm that every team member has access to a Google or Microsoft account. Anyone without one will be unable to log in after the setting is turned on.
+</Warning>
+
+When this setting is active, removing a team member from your Google Workspace or Microsoft 365 directory immediately revokes their PoolProof access — no additional steps required on your end.
+
+## The PoolProof Mobile App
+
+Your technicians use the PoolProof mobile app in the field, and it uses the same credentials as the web app. There is nothing separate to set up.
+
+- Team members sign in with the same email/password or Google/Microsoft account they use on the web.
+- Assigned routes and work orders sync to the app automatically.
+- Chemical readings, service notes, and stop completions logged in the app appear in the web dashboard in real time.
+
+<Info>
+  Role-based access controls apply equally to the mobile app. A technician who cannot access billing data on the web cannot access it on mobile either.
+</Info>
+
+## Multi-Organization Support
+
+If a team member works across more than one pool service company that uses PoolProof, they can belong to multiple organizations under a single login. After signing in, they select which organization to work in and can switch between them at any time without logging out.
+
+This is useful for regional managers overseeing separate business entities, contractors who work with multiple operators, or owners who run multiple companies under different brands.

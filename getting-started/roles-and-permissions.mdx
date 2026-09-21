@@ -1,0 +1,102 @@
+---
+title: "Roles and Permissions in PoolProof Explained"
+sidebarTitle: "Roles & Permissions"
+description: "Learn how PoolProof's capabilities-based access control works, what each built-in role can do, and how to create custom roles for your team."
+---
+
+PoolProof's roles and permissions system gives you precise control over what every member of your team can see and do inside the platform. This page explains how the system is structured, walks through the five built-in roles, and shows you how to build custom roles tailored to the way your business actually operates.
+
+## How Access Control Works
+
+Every action in PoolProof — viewing a customer record, editing a quote, executing a service stop, accessing billing — is governed by a specific **capability**. A **role** is simply a named collection of capabilities. When you assign a role to a team member, you define their entire experience in the platform: which pages appear in their navigation, which data they can read, and which actions they can take.
+
+This means access control is never an afterthought. It is built into every layer of PoolProof — the web app, the mobile app, and the API — so there is no workaround that lets someone see data their role excludes.
+
+<Note>
+  Access controls are enforced everywhere. If a team member doesn't have billing access, they cannot reach billing data through any route — not a direct URL, not the mobile app, not the API.
+</Note>
+
+## The Five Built-In Roles
+
+PoolProof ships with five pre-configured roles designed to match the most common positions in a pool service business. Built-in roles cannot be deleted, and the Owner role cannot be modified.
+
+| Role | What They Can Do |
+|---|---|
+| **Owner** | Full, unrestricted access to everything in PoolProof. This role cannot be modified or deleted. |
+| **Administrator** | Access to virtually everything except the ability to modify or change the Owner's privileges. |
+| **Regional Manager** | Oversee customers, routes, quotes, and work orders. Manage teams and approve quotes. No access to company-wide billing or system configuration. |
+| **Sales** | Create and manage customers, build quotes, and send proposals. Cannot modify routes, execute service stops, or change billing settings. |
+| **Service Technician** | View assigned routes, execute service stops, and log chemical readings and notes. |
+
+<Tip>
+  Use built-in roles as a starting point. If a team member's responsibilities don't fit neatly into one of these five, create a custom role from scratch using the role editor.
+</Tip>
+
+## Custom Roles
+
+No two pool service businesses are exactly alike. The PoolProof role editor lets you build roles from the ground up using **more than 60 individual capabilities** spanning every part of the platform: customers, quotes, work orders, routes, billing, products, settings, and more.
+
+To create a custom role, go to **Settings > Roles** and click **Create Role**. Give the role a name, then toggle on the specific capabilities it needs. The system automatically activates any prerequisite capabilities — for example, enabling quote editing will also enable quote viewing without requiring a separate step.
+
+### Example Custom Roles
+
+The following examples illustrate the kinds of custom roles you can build. Each one is fully configurable to match the exact needs of your operation.
+
+<Accordion title="Dispatcher">
+  A Dispatcher can view and edit routes, assign technicians to stops, and schedule work orders. They cannot execute service, access billing, or modify customer records beyond what scheduling requires. This role is ideal for the person in your office who manages the daily schedule without needing access to sensitive business data.
+</Accordion>
+
+<Accordion title="Office Manager">
+  An Office Manager has full access to customer management, billing, invoicing, and communications but no access to route execution or field operations. This role suits the person who answers the phone, processes payments, and keeps the back office running smoothly.
+</Accordion>
+
+<Accordion title="Junior Technician / Trainee">
+  A limited version of the Service Technician role designed for new hires. They can view assigned routes and log service visits, but cannot modify customer information or view pricing. As they gain experience, you can upgrade them to the full technician role or build something in between.
+</Accordion>
+
+<Accordion title="Account Manager">
+  An Account Manager can view and edit customer information, create quotes, and review service history, but cannot manage routes or access company-wide settings. This role works well for larger operations with dedicated relationship managers handling specific customer accounts.
+</Accordion>
+
+<Accordion title="Crew Lead">
+  A Crew Lead can execute routes and log service like a standard technician, plus view team assignments, add work order notes, and flag issues for follow-up. They have more visibility than a regular tech without being granted management-level access.
+</Accordion>
+
+## Smart Safeguards
+
+PoolProof's access control system includes several safeguards that make role management easier and more reliable.
+
+<CardGroup cols={3}>
+  <Card title="Automatic Dependencies" icon="link">
+    When you grant a capability that requires another to function — like quote editing requiring quote viewing — PoolProof activates the prerequisite automatically. Every role is always internally consistent.
+  </Card>
+  <Card title="Enforced Everywhere" icon="shield-check">
+    Permissions apply across the web app, mobile app, and API simultaneously. There is no path around a capability restriction, regardless of how a team member tries to access the platform.
+  </Card>
+  <Card title="Adaptive Navigation" icon="sidebar">
+    Team members only see the menu items and pages their role permits. A technician's sidebar looks completely different from an administrator's, keeping everyone focused on what's relevant to their job.
+  </Card>
+</CardGroup>
+
+## Where to Configure Roles
+
+All role management happens in one place:
+
+<Steps>
+  <Step title="Open Settings">
+    From the main navigation, go to **Settings > Roles**.
+  </Step>
+  <Step title="Review Built-In Roles">
+    Click any built-in role to see the full list of capabilities it includes. Built-in roles are read-only but serve as a useful reference when designing custom roles.
+  </Step>
+  <Step title="Create a Custom Role">
+    Click **Create Role**, enter a name, and toggle the capabilities you want to grant. The editor groups capabilities by area (customers, billing, routes, etc.) so you can work through each section systematically.
+  </Step>
+  <Step title="Assign the Role">
+    Once your role is saved, assign it to a team member by editing their profile. The change takes effect immediately on their next action.
+  </Step>
+</Steps>
+
+<Note>
+  Need help deciding which capabilities to include in a custom role? Contact PoolProof support and the team will walk you through the setup.
+</Note>

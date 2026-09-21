@@ -1,0 +1,154 @@
+---
+title: "PoolProof Integrations: QuickBooks, SMS, and More"
+sidebarTitle: "Integrations"
+description: "Connect PoolProof to QuickBooks Online, embed your signup page, send branded emails, and unify every customer channel in one inbox."
+---
+
+PoolProof Integrations covers every external connection the platform supports — from real-time QuickBooks Online accounting sync to the communication channels that flow into your centralized inbox. This page explains what each integration does, what data moves, and how to get each one connected.
+
+---
+
+## QuickBooks Online
+
+PoolProof's QuickBooks Online integration eliminates the manual export step entirely. Invoices, payments, refunds, credit notes, and sales tax data sync to QuickBooks automatically as transactions occur — not at the end of the month when you remember to export them.
+
+<Note>
+QuickBooks Online is configured during your PoolProof onboarding. Your dedicated onboarding specialist walks you through the connection and validates the sync before you go live. To connect it after onboarding, go to **Billing → Settings** and follow the QuickBooks setup prompts.
+</Note>
+
+### What Syncs — and When
+
+<CardGroup cols={2}>
+  <Card title="Invoices" icon="file-invoice-dollar">
+    Invoices hand off to QuickBooks automatically as they are created. Each invoice shows its sync status in PoolProof. If a sync fails, you can retry individual items or review the full queue of anything that has not yet landed in QuickBooks.
+  </Card>
+  <Card title="Payments" icon="credit-card">
+    Payments move in both directions. Charges collected through PoolProof appear in QuickBooks immediately. Payments recorded outside PoolProof can be reflected back. Processing fees sync correctly so your net deposit figures always match.
+  </Card>
+  <Card title="Refunds and Credit Notes" icon="rotate-left">
+    Full and partial refunds sync automatically. Credit notes issued in PoolProof appear in QuickBooks in both directions, so your liability balances stay accurate without manual journal entries.
+  </Card>
+  <Card title="Sales Tax" icon="percent">
+    Sales tax calculated per service address flows into QuickBooks as each invoice syncs. Tax-exempt customers are flagged correctly, and commercial accounts with special tax treatment carry through without any manual override.
+  </Card>
+</CardGroup>
+
+### Clearing Account Structure
+
+PoolProof uses a clearing account structure to keep your QuickBooks reconciliation clean. Payments move through a dedicated clearing account before settling, which means your bank feed matches your books without unexplained variances. Month-end close becomes a confirmation step rather than a correction exercise.
+
+### Price Point Billing in QuickBooks
+
+Each service plan in PoolProof can have multiple price points. When you set up a price point, you choose which QuickBooks product or service it bills under. This means revenue from different plan tiers lands in the correct QuickBooks income account automatically — no reclassification needed after the fact.
+
+### Customer and Product Sync
+
+<Accordion title="Importing customers from QuickBooks">
+  If you already have customers in QuickBooks Online, PoolProof can import them during onboarding. Customers imported from Intuit auto-create in PoolProof's billing system, so you do not have to re-enter contact or payment information for your existing book of business.
+</Accordion>
+
+<Accordion title="Products and services sync">
+  Products and services you create in PoolProof sync to QuickBooks Online. When an invoice line item maps to a QuickBooks product, the revenue posts to the correct account without any manual mapping step on your end.
+</Accordion>
+
+### The Business Result
+
+<Tip>
+With the QuickBooks integration active, your books stay current in real time. There is no monthly data entry marathon, no mismatched totals to reconcile, and no end-of-month scramble. Open QuickBooks at any point in the month and the numbers are already right.
+</Tip>
+
+---
+
+## Self-Serve Signup Embed
+
+PoolProof's self-serve signup page is a standalone URL that lets prospects sign up for recurring pool maintenance service on their own — at any hour, without your team needing to be available.
+
+### How to Share It
+
+<Tabs>
+  <Tab title="Embed on Your Website">
+    Paste the signup page URL into an iframe on any page of your website. Prospects stay on your site while completing the entire signup flow, including service area validation, plan selection, payment entry, and agreement signing.
+
+    ```html
+    <iframe
+      src="https://signup.poolproof.com/your-company"
+      width="100%"
+      height="800"
+      frameborder="0"
+    ></iframe>
+    ```
+  </Tab>
+  <Tab title="Direct Link">
+    Share the standalone URL directly — in a social media bio, a paid ad, an email campaign, or a text to a prospect. The page is fully self-contained and works on any device without embedding.
+  </Tab>
+  <Tab title="In Advertising">
+    Use the signup URL as the landing page destination in Google Ads, Facebook Ads, or any other paid channel. Prospects land directly on a page that qualifies their address, shows available plans, and captures payment — turning ad clicks into complete signups without your team lifting a finger.
+  </Tab>
+</Tabs>
+
+### What the Signup Flow Covers
+
+Before a prospect completes signup, PoolProof automatically validates their address against your configured service areas. Customers outside your coverage receive appropriate handling. Customers within coverage proceed to plan selection, payment entry, and digital agreement signing. Every completed signup lands in PoolProof as a pending record for your team to review and approve before service begins.
+
+<Info>
+Signups are conditionally approved. Your team reviews each submission before service starts — so you keep full quality control while gaining the benefit of 24/7 customer acquisition.
+</Info>
+
+---
+
+## Whitelabeled Email Sending
+
+PoolProof sends both transactional emails (invoices, receipts, service completion notices, quote follow-ups) and marketing campaigns from your own domain. Your customers never see PoolProof branding in the "From" address, email headers, or footer.
+
+### Why It Matters
+
+Sending from your own domain protects your sender reputation and improves deliverability. Email clients are more likely to deliver mail from a domain with an established sending history, and your customers are more likely to open email that appears to come from the company they recognize.
+
+<Steps>
+  <Step title="Configure your sending domain">
+    During onboarding, provide your business domain to the PoolProof team. They configure the DNS records (SPF, DKIM, and DMARC) needed to authorize PoolProof to send on your behalf.
+  </Step>
+  <Step title="Verify the domain">
+    PoolProof confirms that the DNS records are in place and that test messages pass authentication checks before any customer-facing email goes out.
+  </Step>
+  <Step title="All email routes through your domain">
+    From that point forward, every invoice email, service completion notice, campaign, and automated notification your customers receive shows your domain in the sender address — not PoolProof's.
+  </Step>
+</Steps>
+
+---
+
+## Communication Channel Connections
+
+PoolProof's centralized inbox aggregates every inbound customer message regardless of where it originates. You connect your channels once, and everything routes to a single shared inbox your entire team can access.
+
+### Supported Channels
+
+<CardGroup cols={2}>
+  <Card title="SMS" icon="message-sms">
+    PoolProof provides a dedicated toll-free number for your business. Customers text that number and their messages arrive in your inbox. Outbound SMS — including invoices, payment links, service notifications, and "on the way" alerts — sends from the same number, keeping the thread coherent for the customer.
+  </Card>
+  <Card title="WhatsApp" icon="whatsapp">
+    Connect your WhatsApp Business account to route WhatsApp messages into the same shared inbox. Customers who prefer WhatsApp reach you without your team needing to monitor a separate app.
+  </Card>
+  <Card title="Email" icon="envelope">
+    Inbound customer emails route to the centralized inbox alongside SMS and other channels. Your team responds from one place instead of monitoring separate email accounts.
+  </Card>
+  <Card title="Facebook Messages" icon="facebook">
+    Connect your Facebook Business page to pull Facebook Messenger conversations into the inbox. Leads and existing customers who message your page receive the same response speed as any other channel.
+  </Card>
+  <Card title="Website Contact Forms" icon="browser">
+    Submissions from your website contact form route to the inbox as new conversations. No more checking a separate email address or form notification inbox — every web lead lands in the same place as your other messages.
+  </Card>
+  <Card title="Centralized Inbox" icon="inbox">
+    All channels converge in one shared inbox. Every conversation has a full thread history, is searchable by customer, and is visible to your entire team — so nothing gets lost in a personal text thread or missed when someone is out.
+  </Card>
+</CardGroup>
+
+---
+
+## More Integrations
+
+<Note>
+PoolProof's integration ecosystem continues to grow. If you need a specific connection — whether that's another accounting platform, a payment processor, or a third-party scheduling tool — contact the PoolProof team at [info@poolproof.com](mailto:info@poolproof.com) or call [(210) 245-7495](tel:+12102457495). The team actively builds integrations based on customer requests.
+</Note>

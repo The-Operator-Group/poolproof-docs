@@ -1,0 +1,175 @@
+---
+title: "Quoting and Work Orders: From Estimate to Completion"
+sidebarTitle: "Quotes & Work Orders"
+description: "Send branded quotes, automate customer approvals, convert wins into scheduled work orders, and give your techs everything they need in the field."
+---
+
+PoolProof's quoting and work orders system manages the complete lifecycle from initial estimate to completed job — including quote creation, customer approval, work order scheduling, technician dispatch, and final sign-off. This page covers how to create and configure quotes, how approval workflows operate, how scheduling and conflict detection work, and what tools your technicians have in the field.
+
+## The Quote-to-Work-Order Flow
+
+<Steps>
+  <Step title="Create a Branded Quote">
+    Build a quote with your company branding, detailed line items from your product catalog, and any relevant photo or PDF attachments. Apply a percentage discount across all line items if needed. If the job requires a down payment before work begins, configure the pre-payment requirement directly on the quote — either a partial deposit or the full quoted amount.
+  </Step>
+  <Step title="Route for Internal Approval (If Required)">
+    PoolProof checks your configured approval thresholds before sending the quote to the customer. If the quote includes a discount above your threshold or exceeds a configured dollar amount, it is automatically routed to the designated manager for review. Routine quotes that fall within your approved parameters go straight to the customer without any delay.
+  </Step>
+  <Step title="Customer Receives and Reviews the Quote">
+    The customer receives the quote by email or SMS with a direct link to review the line items, attached photos or documents, and the total. The quote status updates to **Viewed** as soon as the customer opens it, so you always know where things stand without having to follow up manually.
+  </Step>
+  <Step title="Customer Approves with One Click">
+    The customer approves (or declines) the quote directly from the link — no account login required. If a pre-payment is required, the customer completes payment as part of the approval step. You are notified immediately when the quote is approved.
+  </Step>
+  <Step title="Work Order Created Automatically">
+    The moment the quote is approved, PoolProof converts it into a work order. All line items, customer details, pricing, notes, and attachments transfer automatically — no re-entry required.
+  </Step>
+  <Step title="Schedule the Work Order">
+    Schedule the work order against real-time technician availability. PoolProof performs automatic conflict detection, enforces 30-minute travel buffers between appointments, and matches the job to technicians based on required skills. The right person is on the right job at the right time.
+  </Step>
+  <Step title="Technician Executes and Completes">
+    The assigned technician accesses the full work order on mobile — including customer details, line items, notes, and any attached photos or documents. They update the status in real time as work progresses. Every status change is logged in the audit trail with a timestamp.
+  </Step>
+</Steps>
+
+## Creating Quotes
+
+When you create a quote, you have full control over how it is presented and what it requires from the customer.
+
+### Line Items and Attachments
+
+Add products and services from your catalog as individual line items. Each line item can be tagged to draw the customer's attention to specific recommendations. Attach photos or PDF documents — useful for including inspection photos, equipment specs, or supporting documentation that helps justify the scope of work.
+
+### Discounts
+
+Apply a percentage discount across all line items on the quote. Discounts are applied consistently so you do not need to manually adjust each line item individually.
+
+### Pre-Payment Requirements
+
+Require the customer to pay before work begins. You can require the full quoted amount or a partial deposit — configured per quote. If a pre-payment is required, the customer completes the payment as part of the approval process and work does not begin until the payment is received.
+
+### Issue-to-Quote Conversion
+
+When an issue is logged — whether by a technician in the field or through the customer portal — convert it to a quote with one click. All relevant details from the issue transfer to the quote automatically, saving you the time of rebuilding the scope from scratch.
+
+<Tip>
+  Use issue-to-quote conversion to build a consistent upsell workflow. When technicians log equipment issues during routine service visits, your office can convert those issues into quotes and send them to customers the same day while the problem is still fresh in the customer's mind.
+</Tip>
+
+## Approval Workflows
+
+Not every quote needs the same level of review. PoolProof routes quotes based on rules you define, so small routine jobs move fast and high-value or heavily discounted quotes get the oversight they need.
+
+<Tabs>
+  <Tab title="Management Approval Thresholds">
+    Configure a dollar threshold above which all quotes must be reviewed by a designated manager before they are sent to the customer. For example, any quote over $500 could require manager sign-off. Quotes below the threshold go directly to the customer without waiting for internal review.
+  </Tab>
+  <Tab title="Discount-Based Routing">
+    Configure a discount percentage above which a quote is flagged for management review. This prevents unauthorized discounts from reaching customers without the appropriate approval. Small courtesy discounts on routine jobs pass through automatically; large discounts on significant jobs route to the right person first.
+  </Tab>
+  <Tab title="Automatic Follow-Up">
+    PoolProof automatically sends follow-up notifications to remind customers that a quote is waiting for their review, and reminds quote owners when action is required. You do not need to manually track open quotes or remember to follow up.
+  </Tab>
+</Tabs>
+
+## Templates for Repeat Services
+
+For jobs your team runs regularly — filter cleanings, equipment inspections, seasonal openings, salt cell cleanings — create work order templates with pre-filled line items, required technician skills, and estimated durations. When a new job of that type comes in, start from the template instead of building from scratch.
+
+Update a template at any time. Changes apply to future work orders created from that template and do not affect previously completed jobs.
+
+<Note>
+  Templates are especially valuable when you have multiple technicians creating work orders. A template ensures every filter cleaning quote includes the same line items and the same skill requirements, regardless of who creates it.
+</Note>
+
+## Scheduling and Conflict Detection
+
+When you schedule a work order, PoolProof shows real-time technician availability and enforces the following automatically:
+
+- **Conflict detection** — the system prevents double-booking a technician who already has a commitment in the same time window
+- **30-minute travel buffers** — a buffer is enforced between back-to-back appointments so technicians have realistic travel time
+- **Skill matching** — jobs with required skills (such as variable speed pump programming or automation system configuration) are only offered to technicians who have those skills on their profile
+
+The scheduling interface shows you which technicians are available and qualified, so you make the assignment with confidence rather than guessing.
+
+## Recurring Work Orders
+
+For repeat jobs that occur on a regular interval — such as quarterly equipment inspections or annual filter replacements — configure the work order to recur automatically. PoolProof creates the next work order on schedule without requiring manual creation each time.
+
+## Mobile Access for Technicians
+
+Technicians access their assigned work orders through the PoolProof mobile app. From the field, they can:
+
+- View complete customer details, service address, and access information
+- Review all line items, notes, and attachments on the work order
+- Update the work order status in real time as work progresses
+- Add notes or photos at each stage
+
+Status updates appear immediately in the back-office view, so your team always knows what is happening in the field without needing to call or text the technician.
+
+## Audit Trail
+
+Every action on a quote or work order is logged automatically with a timestamp and the identity of the person who performed it. The audit trail captures:
+
+- Every status change (quote sent, viewed, approved, declined)
+- All internal approval actions and who approved or rejected
+- Customer responses and the time they responded
+- Work order status updates from the field
+
+<Info>
+  The audit trail is read-only and cannot be modified. It gives you an accurate, permanent record of the full lifecycle of every quote and work order — useful for resolving disputes, reviewing team performance, or auditing completed jobs.
+</Info>
+
+## Quote Lifecycle Reference
+
+The following stages represent the full lifecycle of a quote in PoolProof:
+
+| Stage | Description |
+|---|---|
+| **Draft** | Quote is being built; not yet sent to the customer |
+| **Pending Approval** | Quote is awaiting internal manager review |
+| **Sent** | Quote has been delivered to the customer |
+| **Viewed** | Customer has opened the quote |
+| **Approved** | Customer has accepted the quote (and paid any deposit, if required) |
+| **Declined** | Customer has declined the quote |
+| **Work Order Created** | Quote has been automatically converted to a work order |
+| **Scheduled** | Work order has been assigned to a technician and scheduled |
+| **Completed** | Work has been finished and the work order is closed |
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="What happens when a customer approves a quote?">
+    The quote status updates to **Approved** and you are notified immediately. PoolProof automatically converts the quote to a work order, transferring all line items, customer details, pricing, notes, and attachments. No manual re-entry is needed.
+  </Accordion>
+
+  <Accordion title="Can I require manager approval for certain quotes?">
+    Yes. Configure approval thresholds based on discount percentage, quote amount, or both. Quotes that meet your thresholds are automatically routed to designated approvers before the customer sees them. Quotes that fall within your approved parameters go directly to the customer.
+  </Accordion>
+
+  <Accordion title="How does conflict detection work when scheduling?">
+    When you assign a technician to a work order, PoolProof checks their existing schedule in real time and prevents booking them into a conflicting time slot. The system also enforces 30-minute travel buffers between back-to-back appointments automatically — you cannot accidentally schedule two jobs back to back with no travel time.
+  </Accordion>
+
+  <Accordion title="What if a job requires a specialized technician?">
+    Define required skills on a work order or template. When scheduling, PoolProof only shows technicians who have the required skills on their profile. This prevents unqualified technicians from being assigned to specialized jobs — for example, jobs requiring automation system programming or variable speed drive configuration.
+  </Accordion>
+
+  <Accordion title="Can technicians see their work orders on a phone?">
+    Yes. The PoolProof mobile app gives technicians full access to their assigned work orders, including customer details, line items, notes, attachments, and access information. Technicians can update the status in real time directly from the job site.
+  </Accordion>
+
+  <Accordion title="Is there a record of who approved or changed a quote?">
+    Yes. Every action — status change, internal approval, customer response, and field update — is logged in the audit trail with a timestamp and the identity of the person who performed it. The audit trail is permanent and cannot be edited.
+  </Accordion>
+
+  <Accordion title="Can I attach photos to a quote?">
+    Yes. You can attach photos and PDF documents to any quote. Photos are useful for documenting equipment issues or pool conditions that support the scope of work. Attachments are visible to the customer when they review the quote.
+  </Accordion>
+
+  <Accordion title="Do recurring work orders get created automatically?">
+    Yes. Configure a work order to recur at your specified interval and PoolProof creates each subsequent work order on schedule. This is useful for periodic jobs like quarterly equipment inspections or annual drain-and-refill services.
+  </Accordion>
+</AccordionGroup>

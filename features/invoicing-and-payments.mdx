@@ -1,0 +1,161 @@
+---
+title: "Invoicing and Payments: Automated Pool Service Billing"
+sidebarTitle: "Invoicing & Payments"
+description: "Automate invoicing, collections, sales tax, and QuickBooks sync so you get paid on time without chasing customers or managing billing manually."
+---
+
+PoolProof's invoicing and payments system handles every step of your billing cycle automatically — from generating and sending invoices the moment a stop is completed, to collecting payment, retrying failed charges, and syncing everything to QuickBooks Online. This page covers how the system works, how to configure billing options, what payment methods are supported, and how processing fees break down.
+
+<CardGroup cols={3}>
+  <Card title="Billing on Autopilot" icon="rotate">
+    Invoices generate and send automatically on your schedule — whether that's after every stop or on a monthly billing cycle.
+  </Card>
+  <Card title="Get Paid Without Chasing" icon="circle-dollar-to-slot">
+    Automatic credit card and ACH collection with smart retry on failed payments means no awkward follow-up calls to customers.
+  </Card>
+  <Card title="Books That Close Themselves" icon="book-open">
+    Invoices, payments, refunds, credits, and sales tax sync to QuickBooks Online automatically as transactions occur.
+  </Card>
+</CardGroup>
+
+## Automatic Invoicing
+
+PoolProof generates and delivers invoices without any manual work from your office. Invoices are created automatically for recurring services when a stop is completed, or on your configured monthly billing schedule. Once an invoice is generated, it is sent directly to the customer by email or SMS — each message includes your company logo and a direct link to the customer payment portal where they can view their balance and pay immediately.
+
+You never need to manually create, send, or track invoices for routine service.
+
+## Flexible Billing Options
+
+Every pool service company bills differently. PoolProof supports the billing configurations that match how your business actually operates.
+
+<Tabs>
+  <Tab title="Billing Frequency">
+    Choose how often customers are billed:
+
+    - **Per visit** — an invoice is created each time a stop is completed
+    - **Monthly** — all service for the month is consolidated into a single invoice
+
+    Both modes support advance and arrears billing. Bill customers at the start of the month before service is delivered, or after service is completed.
+  </Tab>
+  <Tab title="Chemical Billing">
+    Decide how chemicals appear on customer invoices:
+
+    - **Included in service price** — chemicals are bundled into the flat service rate
+    - **Itemized separately** — chemical usage is broken out as individual line items so customers see exactly what was added to their pool
+  </Tab>
+  <Tab title="Payment Terms">
+    Set payment terms that match your policies:
+
+    - **Due immediately** — payment is due when the invoice is sent
+    - **NET 30** — payment is due 30 days after the invoice date
+    - **NET 60** — payment is due 60 days after the invoice date
+    - **Custom** — define your own payment window
+
+    Payment terms are configured at the service plan level, so different customer segments can have different terms.
+  </Tab>
+</Tabs>
+
+## Automatic Collections
+
+When a customer has a payment method on file, PoolProof collects payment automatically — no manual processing required. Customers can pay by credit card or ACH bank transfer.
+
+### Smart Retry on Failed Payments
+
+When a payment fails, PoolProof does not just notify you and leave you to follow up. The system automatically retries the payment on a smart schedule, timing retries for when the card is most likely to have sufficient funds. At the same time, the customer receives an automatic notification prompting them to update their payment method. You stay out of the collection conversation entirely.
+
+### Automatic Card Updates
+
+When a customer's credit card is reissued — such as when a card expires and the bank sends a new one — PoolProof automatically updates the card details on file. Expiration dates and reissued card numbers are updated without any action from you or the customer, reducing payment failures caused by stale card information.
+
+## ACH / Bank Drafts
+
+Encourage customers to pay by ACH bank draft to reduce your processing costs. Customers opt in to ACH through the payment portal, and future invoices are collected automatically via bank transfer.
+
+<Note>
+  **Processing fees by payment method** — all payments are powered by Stripe:
+
+  | Payment Method | Fee |
+  |---|---|
+  | Customer-entered card (via payment portal) | 2.9% + $0.30 per transaction |
+  | Office-keyed card (manually entered by your staff) | 3.4% + $0.30 per transaction |
+  | ACH bank draft | 0.8%, capped at $5.00 per transaction |
+
+  **Example on a $150 invoice:** customer-entered card costs ~$4.65; office-keyed card costs ~$5.40; ACH costs $1.20. Encouraging customers to set up autopay or switch to ACH reduces your processing costs over time.
+</Note>
+
+## Credit Card Surcharges
+
+Rather than absorbing processing costs yourself, you can pass them to customers automatically through compliant credit card surcharges. PoolProof handles the surcharge calculation and disclosure — you enable the feature once and it applies consistently to all eligible transactions. For a company collecting $40,000 per month in card payments, this can recover $800–$1,200 that would otherwise come out of your revenue.
+
+## Sales Tax
+
+Pool routes frequently cross city and county lines, each with different tax rates. PoolProof automatically calculates the correct sales tax for each invoice based on the customer's service address — not a single flat rate, but the accurate rate for that specific location.
+
+There are no tax tables to configure or maintain. Tax rates are kept current automatically. For commercial accounts or customers with tax-exempt status, mark the account as tax-exempt with a single setting and PoolProof will stop applying sales tax to their invoices.
+
+## Refunds and Credits
+
+You can issue refunds or credits directly from within PoolProof:
+
+- **Partial or full refunds** — reverse a specific amount or the entire invoice payment back to the customer's original payment method
+- **Credits** — apply a credit to a customer's account that automatically reduces the amount due on future invoices
+
+Both refund and credit transactions sync to QuickBooks Online automatically.
+
+## Late Fees
+
+Configure automatic late fees to apply when invoices are not paid by their due date. Late fees are calculated based on your configured rules and added to the outstanding balance without any manual intervention.
+
+## QuickBooks Online Sync
+
+PoolProof maintains a live, two-way connection with QuickBooks Online. As transactions occur — invoices created, payments received, refunds issued, credits applied, sales tax collected — they sync to QuickBooks automatically. You do not need to export files, copy invoice numbers, or reconcile mismatched totals at month end. Your books stay accurate in real time.
+
+<Info>
+  QuickBooks Online is the accounting integration currently supported. All invoices, payments, refunds, credits, and sales tax data are included in the sync.
+</Info>
+
+## Payout Timeline
+
+Collected funds typically reach your bank account within a few days of the transaction. Faster payout timelines are available for qualified customers — ask your PoolProof account team about eligibility.
+
+---
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="How do customers receive invoices?">
+    Invoices are delivered by email or SMS based on the customer's communication preferences. Each invoice includes your company logo and a direct link to the customer payment portal, where customers can view their balance and pay immediately.
+  </Accordion>
+
+  <Accordion title="What happens when a credit card payment fails?">
+    PoolProof automatically retries failed payments on a smart schedule, timing the retry for when the card is statistically most likely to have funds available. The customer also receives an automatic notification prompting them to update their payment method. You do not need to contact the customer or manually reprocess the payment.
+  </Accordion>
+
+  <Accordion title="How do I reduce credit card processing fees?">
+    The two most effective approaches are enabling ACH bank drafts — which cost 0.8% capped at $5, compared to 2.9% + $0.30 for customer-entered cards — and enabling credit card surcharges to pass processing costs to customers. Both options are configured in your billing settings.
+  </Accordion>
+
+  <Accordion title="Can I bill some customers monthly and others per visit?">
+    Yes. Billing frequency, advance vs. arrears timing, and chemical billing mode are all configured at the service plan level. Different service plans can use different billing configurations, so you can bill residential weekly maintenance customers monthly while billing one-time service customers per visit.
+  </Accordion>
+
+  <Accordion title="How does sales tax work when my routes cross multiple cities?">
+    PoolProof automatically calculates the correct tax rate for each invoice based on the service address, not your business address. As your routes cross different jurisdictions, each invoice uses the accurate local rate. There are no tax tables to manage or update manually.
+  </Accordion>
+
+  <Accordion title="How do I mark a commercial customer as tax-exempt?">
+    Open the customer account in PoolProof and enable the tax-exempt setting. PoolProof will stop calculating sales tax on that customer's invoices. This is commonly used for commercial accounts such as HOAs, hotels, and property management companies.
+  </Accordion>
+
+  <Accordion title="How quickly do I receive collected funds?">
+    Funds typically arrive in your bank account within a few days after a transaction is collected. Qualified customers may be eligible for faster payout timelines — contact your PoolProof account team for details.
+  </Accordion>
+
+  <Accordion title="What accounting software does PoolProof integrate with?">
+    PoolProof currently integrates with QuickBooks Online. Invoices, payments, refunds, credits, and sales tax data all sync automatically as transactions occur — no manual exports or imports required.
+  </Accordion>
+
+  <Accordion title="Can I issue a partial refund?">
+    Yes. You can issue a partial or full refund on any collected invoice directly from the PoolProof dashboard. The refund is processed back to the customer's original payment method and syncs to QuickBooks Online automatically.
+  </Accordion>
+</AccordionGroup>
